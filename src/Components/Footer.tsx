@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";
 interface iconProps {
@@ -13,9 +14,9 @@ const footerNavigation = {
     { name: "Relocation Services", href: "#" },
   ],
   support: [
-    { name: "Fees", href: "#" },
-    { name: "Contact us", href: "#" },
-    { name: "Guides", href: "#" },
+    { name: "Fees", href: "/fees" },
+    { name: "Contact us", href: "/contact-us" },
+    // { name: "Guides", href: "#" },
   ],
   company: [
     { name: "About us", href: "#" },
@@ -107,12 +108,12 @@ export default function Footer() {
                 <ul className="mt-4 space-y-4">
                   {footerNavigation.support.map((item) => (
                     <li key={item.name}>
-                      <a
-                        href={item.href}
+                      <NavLink
+                        to={item.href}
                         className="text-base text-gray-500 hover:text-gray-900"
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

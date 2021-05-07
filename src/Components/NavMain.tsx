@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { NavLink } from "react-router-dom";
 import { Popover, Transition } from "@headlessui/react";
 import {
   AnnotationIcon,
@@ -13,27 +14,29 @@ import logo from "../Assets/ALS_logo.png";
 
 const services = [
   {
-    name: "Inbox",
+    name: "Real Estate",
     description:
-      "Get a better understanding of where your traffic is coming from.",
+      "Do you dream about buying a property in France, whether it is a holiday home or a permanent move, but just don’t know where to start?",
     href: "#",
     icon: InboxIcon,
   },
   {
-    name: "Messaging",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    name: "Property Management",
+    description:
+      "Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.",
     icon: AnnotationIcon,
   },
   {
-    name: "Live Chat",
-    description: "Your customers' data will be safe and secure.",
+    name: "Financial Advice",
+    description:
+      "When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.",
     href: "#",
     icon: ChatAlt2Icon,
   },
   {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
+    name: "Relocation Services",
+    description:
+      "Relocating to France means dealing with the legendary French Administration. Let us deal with that!",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -49,12 +52,9 @@ export const NavMain = () => {
       <Popover className="relative bg-purple-400">
         {({ open }) => (
           <>
-            <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+            <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-6 sm:px-6 md:justify-start md:space-x-10 ">
               <div className="flex justify-start lg:w-0 lg:flex-1">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
-                  <img className="h-8 w-auto sm:h-10" src={logo} alt="" />
-                </a>
+                <img className="h-8 w-auto sm:h-12" src={logo} alt="ALS logo" />
               </div>
               <div className="-mr-2 -my-2 md:hidden">
                 <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -63,19 +63,25 @@ export const NavMain = () => {
                 </Popover.Button>
               </div>
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
+                <NavLink
+                  to="/"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
+                >
+                  Home
+                </NavLink>
                 <Popover className="relative">
                   {({ open }) => (
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-400" : "text-gray-200",
-                          "group bg-purple-400 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          open ? "text-gray-900" : "text-gray-200",
+                          "group bg-purple-400 rounded-md inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>Services</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-400" : "text-gray-200",
+                            open ? "text-gray-900" : "text-gray-200",
                             "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
@@ -132,35 +138,35 @@ export const NavMain = () => {
                   href="#"
                   className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
-                  Fees
-                </a>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-200 hover:text-gray-900"
-                >
                   Living & Working in France
                 </a>
-                <a
-                  href="#"
+                <NavLink
+                  to="/why-pay-for-professional-advice"
                   className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Why pay for professional advice?
-                </a>
+                </NavLink>
                 <a
                   href="#"
                   className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Blog
                 </a>
+                <NavLink
+                  to="/fees"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
+                >
+                  Fees
+                </NavLink>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <span className="inline-flex rounded-md shadow">
-                  <a
-                    href="#"
+                  <NavLink
+                    to="contact-us"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
                   >
                     Contact Us
-                  </a>
+                  </NavLink>
                 </span>
               </div>
             </div>
