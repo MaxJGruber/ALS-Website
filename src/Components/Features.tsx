@@ -7,27 +7,27 @@ import {
 
 const features = [
   {
-    name: "Competitive rates",
+    name: "Real Estate",
     description:
-      "Consequuntur omnis dicta cumque, inventore atque ab dolores aspernatur tempora ab doloremque.",
+      "Do you dream about buying a property in France, whether it is a holiday home or a permanent move, but just don’t know where to start?",
     icon: GlobeAltIcon,
   },
   {
-    name: "No hidden fees",
+    name: "Property Management",
     description:
-      "Corporis quisquam nostrum nulla veniam recusandae temporibus aperiam officia incidunt at distinctio ratione.",
+      "Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.",
     icon: ScaleIcon,
   },
   {
-    name: "Instant transfers",
+    name: "Financial Advice",
     description:
-      "Omnis, illo delectus? Libero, possimus nulla nemo tenetur adipisci repellat dolore eligendi velit doloribus mollitia.",
+      "When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.",
     icon: LightningBoltIcon,
   },
   {
-    name: "Reminder emails",
+    name: "Relocation Services",
     description:
-      "Veniam necessitatibus reiciendis fugit explicabo dolorem nihil et omnis assumenda odit? Quisquam unde accusantium.",
+      "Relocating to France means dealing with the legendary French Administration. Let us deal with that!",
     icon: MailIcon,
   },
 ];

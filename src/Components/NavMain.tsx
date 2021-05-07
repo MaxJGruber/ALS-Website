@@ -68,14 +68,14 @@ export const NavMain = () => {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-500",
+                          open ? "text-gray-400" : "text-gray-200",
                           "group bg-purple-400 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>Services</span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-600" : "text-gray-400",
+                            open ? "text-gray-400" : "text-gray-200",
                             "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
@@ -130,25 +130,25 @@ export const NavMain = () => {
 
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Fees
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Living & Working in France
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Why pay for professional advice?
                 </a>
                 <a
                   href="#"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                  className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Blog
                 </a>

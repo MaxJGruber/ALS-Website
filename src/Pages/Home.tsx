@@ -1,72 +1,13 @@
-import {
-  ChatAltIcon,
-  DocumentReportIcon,
-  HeartIcon,
-  InboxIcon,
-  PencilAltIcon,
-  ReplyIcon,
-  SparklesIcon,
-  TrashIcon,
-  UsersIcon,
-} from "@heroicons/react/outline";
+import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
 
 import housewallPic from "../Assets/buy-french-property.jpeg";
 import gatePic from "../Assets/french-farm-house.jpeg";
 import { NavMain } from "../Components/NavMain";
 import { HeroSection } from "../Components/HeroSection";
+import { Introduction } from "../Components/Introduction";
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 
-const features = [
-  {
-    name: "Unlimited Inboxes",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: InboxIcon,
-  },
-  {
-    name: "Manage Team Members",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: UsersIcon,
-  },
-  {
-    name: "Spam Report",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: TrashIcon,
-  },
-  {
-    name: "Compose in Markdown",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: PencilAltIcon,
-  },
-  {
-    name: "Team Reporting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: DocumentReportIcon,
-  },
-  {
-    name: "Saved Replies",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ReplyIcon,
-  },
-  {
-    name: "Email Commenting",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: ChatAltIcon,
-  },
-  {
-    name: "Connect with Customers",
-    description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-    icon: HeartIcon,
-  },
-];
 const metrics = [
   {
     id: 1,
@@ -103,7 +44,7 @@ export default function Home() {
         <HeroSection />
 
         {/* Logo Cloud */}
-        <div className="bg-gray-100">
+        <div className="bg-yellow-300">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
               Trusted by over 5 very average small businesses
@@ -149,127 +90,7 @@ export default function Home() {
         </div>
 
         {/* Alternating Feature Sections */}
-        <div className="relative pt-16 pb-32 overflow-hidden">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"
-          />
-          <div className="relative">
-            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-              <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
-                <div>
-                  <div>
-                    <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <InboxIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Stay on top of customer support
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
-                    </p>
-                    <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                      >
-                        Get started
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-8 border-t border-gray-200 pt-6">
-                  <blockquote>
-                    <div>
-                      <p className="text-base text-gray-500">
-                        &ldquo;Cras velit quis eros eget rhoncus lacus ultrices
-                        sed diam. Sit orci risus aenean curabitur donec aliquet.
-                        Mi venenatis in euismod ut.&rdquo;
-                      </p>
-                    </div>
-                    <footer className="mt-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="flex-shrink-0">
-                          <img
-                            className="h-6 w-6 rounded-full"
-                            src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div className="text-base font-medium text-gray-700">
-                          Marcia Hill, Digital Marketing Manager
-                        </div>
-                      </div>
-                    </footer>
-                  </blockquote>
-                </div>
-              </div>
-              <div className="mt-12 sm:mt-16 lg:mt-0">
-                <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src={housewallPic}
-                    alt="Inbox user interface"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-24">
-            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-              <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-                <div>
-                  <div>
-                    <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
-                      <SparklesIcon
-                        className="h-6 w-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                      Better understand your customers
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-500">
-                      Semper curabitur ullamcorper posuere nunc sed. Ornare
-                      iaculis bibendum malesuada faucibus lacinia porttitor.
-                      Pulvinar laoreet sagittis viverra duis. In venenatis sem
-                      arcu pretium pharetra at. Lectus viverra dui tellus ornare
-                      pharetra.
-                    </p>
-                    <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
-                      >
-                        Get started
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
-                <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                  <img
-                    className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                    src={gatePic}
-                    alt="Customer profile user interface"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Introduction />
 
         {/* Gradient Feature Section */}
         <Features />
@@ -331,9 +152,9 @@ export default function Home() {
         <div className="bg-white">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              <span className="block">Ready to get started?</span>
+              <span className="block">Ready to start a new life?</span>
               <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Get in touch or create an account.
+                Keep calm & get in touch.
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
@@ -341,13 +162,13 @@ export default function Home() {
                 href="#"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
               >
-                Learn more
+                Contact us
               </a>
               <a
                 href="#"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
               >
-                Get started
+                Learn more
               </a>
             </div>
           </div>

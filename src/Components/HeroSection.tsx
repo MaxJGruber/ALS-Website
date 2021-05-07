@@ -2,8 +2,12 @@ import introPic from "../Assets/living-in-france.jpeg";
 
 export const HeroSection = () => {
   return (
-    <div className="relative">
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+    <div className="relative bg-yellow-300">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-purple-400"
+      />
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-yellow-300" />
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
           <div className="absolute inset-0">
@@ -32,20 +36,20 @@ export const HeroSection = () => {
               Have you already moved or invested and need advice and help?
             </p>
             <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                <a
-                  href="#"
-                  className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
-                >
-                  Get started
-                </a>
-                <a
+              {/* <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"> */}
+              <a
+                href="#"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
+              >
+                Check out what we have to offer
+              </a>
+              {/* <a
                   href="#"
                   className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                 >
                   Live demo
-                </a>
-              </div>
+                </a> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
