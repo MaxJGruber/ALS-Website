@@ -1,24 +1,20 @@
 import axios from "axios";
+import config from "../src/config-store";
 
-// const {
-//   WUFOO_BASE_URL,
-//   WUFOO_API_KEY,
-//   WUFOO_FORM_ID,
-//   WUFOO_PASSWORD,
-// } = process.env;
+const { WUFOO_BASE_URL, WUFOO_API_KEY, WUFOO_FORM_ID, WUFOO_PASSWORD } = config;
 
 const service = axios.create({
-  baseURL: "https://maxmenace94.wufoo.com",
+  baseURL: WUFOO_BASE_URL,
   auth: {
-    username: "4C3A-FW55-B1RV-0ABV",
-    password: "pa$$w0rd",
+    username: WUFOO_API_KEY,
+    password: WUFOO_PASSWORD,
   },
 });
 
 export async function submitForm(
   dataForm: Record<string, any>
 ): Promise<Record<string, any>> {
-  const url = `/api/v3/forms/z17zzudj10eomoo/entries.json`;
+  const url = `/api/v3/forms/${WUFOO_FORM_ID}/entries.json`;
   const { data } = await service.request({
     method: "post",
     url,

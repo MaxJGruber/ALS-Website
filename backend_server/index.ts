@@ -1,19 +1,13 @@
-import { config as dotenvConfig } from "dotenv";
+import config from "../src/config-store";
 import express, { Response, Request } from "express";
 import { submitForm } from "./wufoo.api";
 import FormData from "form-data";
 
-dotenvConfig();
 const app = express();
 
 app.use(express.json());
 
-app.get("/getting", async (req: Request, res: Response) => {
-  res.send("Hello");
-});
-
 app.post("/submit-form", async (req: Request, res: Response) => {
-  console.log(req.body);
   try {
     const formData = new FormData();
     for (var key in req.body) {
@@ -27,7 +21,5 @@ app.post("/submit-form", async (req: Request, res: Response) => {
   }
 });
 
-const port = process.env.BACKEND_PORT || 4000;
-app.listen(port);
-console.log(`Server running on port: ${port}.`);
-console.log(`Go to: http://localhost:${port}`);
+app.listen(config.BACKEND_PORT);
+console.log(`Server running on: http://localhost:${config.BACKEND_PORT}`);
