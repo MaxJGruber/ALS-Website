@@ -1,9 +1,11 @@
 "use strict";
 exports.__esModule = true;
-// import { config as dotenvConfig } from "dotenv";
+var dotenv_1 = require("dotenv");
 var express = require("express");
 var path = require("path");
-// dotenvConfig();
+var nconf = require("nconf");
+nconf.env().argv();
+dotenv_1.config();
 var app = express();
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "build")));

@@ -1,13 +1,37 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
+import { sendForm } from "../ApiHandlers/wufooApi";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Form() {
   const [agreed, setAgreed] = useState(false);
+  const [form, setForm] = useState({});
 
+  function handleChange(e: Record<string, any>) {
+    const newForm: Record<string, any> = { ...form };
+    const value = e.target.value;
+    const key = e.target.name;
+    newForm[key] = value;
+    console.log(newForm);
+    setForm((form) => (form = newForm));
+  }
+
+  async function handleSubmit(
+    e: Record<string, any>
+  ): Promise<Record<string, any> | undefined> {
+    e.preventDefault();
+    console.log("SUBMIT FUNC");
+    try {
+      return sendForm(form);
+      // return {}
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  // console.log(sendForm({ hello: "hello" }));
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
@@ -87,7 +111,7 @@ export default function Example() {
             you.
             <br /> <br />
             You can send us a message using the short form below. Mandatory
-            fields are marked with a *.
+            fields are marked with a <span className="text-red-600">*</span>.
           </p>
         </div>
         <div className="mt-12">
@@ -101,7 +125,7 @@ export default function Example() {
                 htmlFor="first_name"
                 className="block text-sm font-medium text-gray-700"
               >
-                First name
+                <span className="text-red-600">*</span>First name
               </label>
               <div className="mt-1">
                 <input
@@ -118,7 +142,7 @@ export default function Example() {
                 htmlFor="last_name"
                 className="block text-sm font-medium text-gray-700"
               >
-                Last name
+                <span className="text-red-600">*</span>Last name
               </label>
               <div className="mt-1">
                 <input
@@ -129,37 +153,72 @@ export default function Example() {
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
-            </div>
+            </div>{" "}
             <div className="sm:col-span-2">
               <label
-                htmlFor="company"
+                htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
-                Company
+                <span className="text-red-600">*</span>Email
               </label>
               <div className="mt-1">
                 <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  autoComplete="organization"
+                  id="email"
+                  name="Field4"
+                  type="email"
+                  autoComplete="email"
+                  onChange={handleChange}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label
-                htmlFor="email"
+                htmlFor="address"
                 className="block text-sm font-medium text-gray-700"
               >
-                Email
+                Address
               </label>
               <div className="mt-1">
                 <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
+                  type="text"
+                  name="address"
+                  id="address"
+                  autoComplete="organization"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="city"
+                className="block text-sm font-medium text-gray-700"
+              >
+                City
+              </label>
+              <div className="mt-1">
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  autoComplete="city"
+                  className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="country"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Country
+              </label>
+              <div className="mt-1">
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  autoComplete="country"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                 />
               </div>
@@ -201,7 +260,7 @@ export default function Example() {
                 htmlFor="message"
                 className="block text-sm font-medium text-gray-700"
               >
-                Message
+                <span className="text-red-600">*</span>Message
               </label>
               <div className="mt-1">
                 <textarea
@@ -236,7 +295,8 @@ export default function Example() {
                 </div>
                 <div className="ml-3">
                   <p className="text-base text-gray-500">
-                    By selecting this, you agree to the{" "}
+                    <span className="text-red-600">*</span>By selecting this,
+                    you agree to the{" "}
                     <a href="#" className="font-medium text-gray-700 underline">
                       Privacy Policy
                     </a>{" "}
@@ -252,6 +312,7 @@ export default function Example() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
+                onSubmit={handleSubmit}
                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Let's talk

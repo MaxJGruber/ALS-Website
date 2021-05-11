@@ -1,8 +1,10 @@
-// import { config as dotenvConfig } from "dotenv";
+import { config as dotenvConfig } from "dotenv";
 import * as express from "express";
 import * as path from "path";
+import * as nconf from "nconf";
+nconf.env().argv();
 
-// dotenvConfig();
+dotenvConfig();
 const app = express();
 
 app.use(express.static(__dirname));
