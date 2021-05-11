@@ -1,7 +1,3 @@
-import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
-
-import housewallPic from "../Assets/buy-french-property.jpeg";
-import gatePic from "../Assets/french-farm-house.jpeg";
 import { NavMain } from "../Components/NavMain";
 import { HeroSection } from "../Components/HeroSection";
 import { Introduction } from "../Components/Introduction";

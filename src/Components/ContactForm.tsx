@@ -6,9 +6,9 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Form() {
+export default function Form(props: Record<string, any>) {
   const [agreed, setAgreed] = useState(false);
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState<Record<string, any>>({});
 
   function handleChange(e: Record<string, any>) {
     const newForm: Record<string, any> = { ...form };
@@ -18,20 +18,25 @@ export default function Form() {
     console.log(newForm);
     setForm((form) => (form = newForm));
   }
-
+  console.log("FORM", form);
   async function handleSubmit(
     e: Record<string, any>
   ): Promise<Record<string, any> | undefined> {
     e.preventDefault();
     console.log("SUBMIT FUNC");
     try {
+      // const form_data = new FormData();
+      // console.log("HELLO2");
+      // for (var key in form) {
+      //   form_data.append(key, form[key]);
+      // }
+      // console.log(form_data);
       return sendForm(form);
-      // return {}
     } catch (error) {
       console.log(error);
     }
   }
-  // console.log(sendForm({ hello: "hello" }));
+
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
@@ -116,8 +121,8 @@ export default function Form() {
         </div>
         <div className="mt-12">
           <form
-            action="#"
-            method="POST"
+            onSubmit={handleSubmit}
+            encType="multipart/form-data"
             className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
           >
             <div>
@@ -312,7 +317,6 @@ export default function Form() {
             <div className="sm:col-span-2">
               <button
                 type="submit"
-                onSubmit={handleSubmit}
                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Let's talk
