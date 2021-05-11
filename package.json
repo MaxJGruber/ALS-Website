@@ -36,13 +36,13 @@
     "yargs": "^17.0.1"
   },
   "scripts": {
-    "start": "node Server/server.js",
+    "start": "node server.js",
     "build": "craco build",
     "dev": "craco start",
-    "dev:api": "ts-node src/ApiHandlers/wufooApi.ts",
-    "dev:server": "nodemon ./Server/server.js",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "back:dev": "ts-node ./backend_server/index.ts",
+    "back:prod": ""
   },
   "eslintConfig": {
     "extends": [

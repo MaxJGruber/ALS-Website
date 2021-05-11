@@ -1,4 +1,4 @@
-import config from "../src/config-store";
+import config from "./config-store";
 import express, { Response, Request } from "express";
 import { submitForm } from "./wufoo.api";
 import FormData from "form-data";

@@ -1,5 +1,5 @@
 import axios from "axios";
-import config from "../src/config-store";
+import config from "./config-store";
 
 const { WUFOO_BASE_URL, WUFOO_API_KEY, WUFOO_FORM_ID, WUFOO_PASSWORD } = config;
 
