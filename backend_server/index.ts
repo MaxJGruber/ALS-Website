@@ -13,11 +13,10 @@ app.use((req, res, next) => {
   next();
 });
 
-const corsOptions = {
-  origin: "http://localhost:3000",
+app.use(cors({
+  origin: `http://localhost:${config.PORT}`,
   credentials: true,
-};
-app.use(cors(corsOptions));
+}));
 
 app.post("/submit-form", async (req: Request, res: Response) => {
   try {
