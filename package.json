@@ -43,7 +43,7 @@
     "dev": "craco start",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "back:dev": "ts-node ./backend_server/index.ts",
+    "back:dev": "ts-node --project tsconfig.backend.json ./backend_server/index.ts",
     "back:prod": ""
   },
   "eslintConfig": {
