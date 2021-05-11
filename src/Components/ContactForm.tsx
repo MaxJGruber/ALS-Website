@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
-import { sendForm } from "../ApiHandlers/wufooApi";
+import { submitForm } from "../ApiHandlers/wufooApi";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -18,23 +18,13 @@ export default function Form(props: Record<string, any>) {
     console.log(newForm);
     setForm((form) => (form = newForm));
   }
-  console.log("FORM", form);
+
   async function handleSubmit(
     e: Record<string, any>
-  ): Promise<Record<string, any> | undefined> {
+  ): Promise<number | undefined> {
     e.preventDefault();
     console.log("SUBMIT FUNC");
-    try {
-      // const form_data = new FormData();
-      // console.log("HELLO2");
-      // for (var key in form) {
-      //   form_data.append(key, form[key]);
-      // }
-      // console.log(form_data);
-      return sendForm(form);
-    } catch (error) {
-      console.log(error);
-    }
+    return submitForm(form);
   }
 
   return (
