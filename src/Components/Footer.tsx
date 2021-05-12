@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";
 interface iconProps {
@@ -19,9 +20,9 @@ const footerNavigation = {
     // { name: "Guides", href: "#" },
   ],
   company: [
-    { name: "About us", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "About us", href: "/team" },
+    { name: "Blog", href: "/blog" },
+    // { name: "Partners", href: "#" },
   ],
   legal: [
     { name: "Policy", href: "#" },
@@ -55,7 +56,19 @@ const footerNavigation = {
   ],
 };
 
-export default function Footer() {
+const mapDispatchToProps = (dispatch: Function) => ({
+  setLanguage: (language: string) =>
+    dispatch({ type: "SET_LANGUAGE", language }),
+});
+const mapStateToProps = (state: Record<string, any>) => {
+  return { language: state.language };
+};
+
+function Footer(props: Record<string, any>) {
+  const handleChange = (event: Record<string, any>) => {
+    props.setLanguage(event.target.value);
+  };
+
   return (
     <footer className="bg-gray-50" aria-labelledby="footerHeading">
       <h2 id="footerHeading" className="sr-only">
@@ -171,12 +184,11 @@ export default function Footer() {
                   name="language"
                   className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                   defaultValue="English"
+                  onChange={handleChange}
                 >
-                  <option>English</option>
-                  <option>French</option>
-                  <option>German</option>
-                  <option>Japanese</option>
-                  <option>Spanish</option>
+                  <option value="EN">English</option>
+                  <option value="FR">French</option>
+                  <option value="DE">German</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
                   <ChevronDownIcon
@@ -205,3 +217,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

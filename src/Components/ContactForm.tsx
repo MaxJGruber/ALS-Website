@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import { submitForm } from "../ApiHandlers/wufooApi";
+import withStore from "./ReactContext.jsx";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Form(props: Record<string, any>) {
+function Form(props: Record<string, any>) {
   const [agreed, setAgreed] = useState(false);
   const [form, setForm] = useState<Record<string, any>>({});
 
@@ -26,7 +27,7 @@ export default function Form(props: Record<string, any>) {
     console.log("SUBMIT FUNC");
     return submitForm(form);
   }
-
+  console.log(props);
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
       <div className="relative max-w-xl mx-auto">
@@ -318,3 +319,5 @@ export default function Form(props: Record<string, any>) {
     </div>
   );
 }
+
+export default withStore(Form);

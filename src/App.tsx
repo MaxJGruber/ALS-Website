@@ -1,12 +1,16 @@
 import { Route, Switch } from "react-router-dom";
-import Home from "./Pages/Home";
-import { ContactUs } from "./Pages/ContactUs";
-import { FranceAndAdvice } from "./Pages/France&Advice";
-import { Fees } from "./Pages/Fees";
-import { Blog } from "./Pages/Blog";
-import { Team } from "./Pages/Team";
+import { useState, useEffect } from "react";
+import Home from "./pages/Home";
+import { ContactUs } from "./pages/ContactUs";
+import { FranceAndAdvice } from "./pages/France&Advice";
+import { Fees } from "./pages/Fees";
+import { Blog } from "./pages/Blog";
+import { Team } from "./pages/Team";
+import language from "./content/index";
 
 function App() {
+  const [contentLanguage, setContentLanguage] = useState("EN");
+
   return (
     <div className="App">
       <Switch>
