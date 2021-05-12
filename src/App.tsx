@@ -3,6 +3,8 @@ import Home from "./Pages/Home";
 import { ContactUs } from "./Pages/ContactUs";
 import { FranceAndAdvice } from "./Pages/France&Advice";
 import { Fees } from "./Pages/Fees";
+import { Blog } from "./Pages/Blog";
+import { Team } from "./Pages/Team";
 
 function App() {
   return (
@@ -41,7 +43,8 @@ function App() {
           component={FranceAndAdvice}
         />
         <Route exact path="/fees" component={Fees} />
-        <Route exact path="/blog" component={Home} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/team" component={Team} />
         <Route exact path="/contact-us" component={ContactUs} />
       </Switch>
     </div>
