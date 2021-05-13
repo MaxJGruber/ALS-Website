@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import store from "../redux/store";
 import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";
@@ -67,7 +68,20 @@ const mapStateToProps = (state: Record<string, any>) => {
 function Footer(props: Record<string, any>) {
   const handleChange = (event: Record<string, any>) => {
     props.setLanguage(event.target.value);
+    localStorage.setItem("language", event.target.value);
   };
+
+  function getdefaultValue(): string | undefined {
+    console.log(store.getState().language.language);
+    switch (store.getState().language.language) {
+      case "en":
+        return "en";
+      case "fr":
+        return "fr";
+      case "de":
+        return "de";
+    }
+  }
 
   return (
     <footer className="bg-gray-50" aria-labelledby="footerHeading">
@@ -183,12 +197,12 @@ function Footer(props: Record<string, any>) {
                   id="language"
                   name="language"
                   className="appearance-none block w-full bg-none bg-white border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  defaultValue="English"
+                  defaultValue={getdefaultValue()}
                   onChange={handleChange}
                 >
-                  <option value="EN">English</option>
-                  <option value="FR">French</option>
-                  <option value="DE">German</option>
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                  <option value="de">Deutsch</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 px-2 flex items-center">
                   <ChevronDownIcon

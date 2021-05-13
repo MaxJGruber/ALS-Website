@@ -6,10 +6,25 @@ import { FranceAndAdvice } from "./pages/France&Advice";
 import { Fees } from "./pages/Fees";
 import { Blog } from "./pages/Blog";
 import { Team } from "./pages/Team";
-import language from "./content/index";
+import store from "./redux/store";
+import { connect } from "react-redux";
+
+const mapDispatchToProps = (dispatch: Function) => ({
+  setContent: (content: Record<string, any>) =>
+    dispatch({ type: "SET_CONTENT", content }),
+});
+const mapStateToProps = (state: Record<string, any>) => {
+  return { content: state.content };
+};
 
 function App() {
-  const [contentLanguage, setContentLanguage] = useState("EN");
+  const [contentLanguage, setContentLanguage] = useState("en");
+
+  useEffect(() => {
+    if (contentLanguage !== store.getState().language.language) {
+      setContentLanguage(store.getState().language.language);
+    }
+  }, [contentLanguage]);
 
   return (
     <div className="App">
@@ -54,5 +69,4 @@ function App() {
     </div>
   );
 }
-
-export default App;
+export default connect(mapDispatchToProps, mapStateToProps)(App);

@@ -1,5 +1,5 @@
 export const ProfessionalAdvice = {
-  title: "Why Pay For Professional Advice?",
+  title: "Bonjour?",
   para1:
     "There are fundamental differences in terms of law, taxation and employment between France and other English speaking countries and these are the main issues that will have an impact when you buy a property or move to France.",
   para2:

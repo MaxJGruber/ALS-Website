@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Switch } from "@headlessui/react";
 import { submitForm } from "../ApiHandlers/wufooApi";
-import withStore from "./ReactContext.jsx";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Form(props: Record<string, any>) {
+export default function Form(props: Record<string, any>) {
   const [agreed, setAgreed] = useState(false);
   const [form, setForm] = useState<Record<string, any>>({});
 
@@ -319,5 +318,3 @@ function Form(props: Record<string, any>) {
     </div>
   );
 }
-
-export default withStore(Form);

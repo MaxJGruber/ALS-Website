@@ -1,10 +1,9 @@
-import { ProfessionalAdvice } from "./English/ProfessionalAdvice";
-import { taxesAndSocialCharges } from "./English/Taxes&SocialCharges";
+import * as en from "./English/index";
+import * as fr from "./French/index";
+import * as de from "./German/index";
 
 export default {
-  en: {
-    taxesAndSocialCharges,
-    ProfessionalAdvice,
-  },
-  fr: { taxesAndSocialCharges, ProfessionalAdvice },
+  en,
+  fr,
+  de,
 };

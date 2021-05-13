@@ -1,5 +1,5 @@
 export const financialAdvice = {
-  title: `Financial Advice`,
+  title: `Bonjour`,
   text: [
     `When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.`,
     `Legal requirements and financial laws change regularly and being accompanied by an expert that has the keys to guide you through the process and knows the loopholes is an investment that pays off.`,
