@@ -43,14 +43,17 @@
     "yargs": "^17.0.1"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "craco build",
-    "dev": "craco start",
-    "dev:all": "craco start & nodemon --project tsconfig.backend.json --watch './**/*.ts' --exec 'ts-node' ./backend_server/index.ts",
+    "start": "yarn prod:back & yarn prod:front",
+    "build": "yarn build:front & yarn build:back",
+    "dev:all": "yarn dev:front & yarn dev:back",
+    "dev:back": "nodemon --project tsconfig.backend.json --watch './**/*.ts' --exec 'ts-node' ./backend_server/index.ts",
+    "prod:back": "node ./backend_build/index.js",
+    "build:back": "tsc --project tsconfig.backend.json --outDir \"backend_build\"",
+    "dev:front": "craco start",
+    "prod:front": "node server.js",
+    "build:front": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "back:dev": "ts-node --project tsconfig.backend.json ./backend_server/index.ts",
-    "back:prod": ""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
