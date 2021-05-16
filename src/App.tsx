@@ -6,7 +6,7 @@ import { FranceAndAdvice } from "./Pages/France&Advice";
 import { Fees } from "./Pages/Fees";
 import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";
-import store from "./redux/store";
+import store from "./Redux/store";
 import { connect } from "react-redux";
 
 const mapDispatchToProps = (dispatch: Function) => ({

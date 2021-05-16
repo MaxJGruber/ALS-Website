@@ -1,4 +1,4 @@
-import content from "../content/index";
+import content from "../Content/index";
 
 export default function languageContentReducer(
   state = { content: content.en },

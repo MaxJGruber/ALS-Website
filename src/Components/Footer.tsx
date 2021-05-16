@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import store from "../redux/store";
+import store from "../Redux/store";
 import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";

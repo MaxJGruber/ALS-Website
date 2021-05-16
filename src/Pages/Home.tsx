@@ -4,7 +4,7 @@ import { Introduction } from "../Components/Introduction";
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
-import changeLanguage from "../redux/languageContent";
+import changeLanguage from "../Redux/languageContent";
 
 const metrics = [
   {
