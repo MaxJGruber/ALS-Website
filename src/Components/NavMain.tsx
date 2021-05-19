@@ -49,7 +49,7 @@ function classNames(...classes: string[]) {
 export const NavMain = () => {
   return (
     <header>
-      <Popover className="relative bg-purple-400">
+      <Popover className="relative bg-purple-300">
         {({ open }) => (
           <>
             <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-6 sm:px-6 md:justify-start md:space-x-10 ">
@@ -75,7 +75,7 @@ export const NavMain = () => {
                       <Popover.Button
                         className={classNames(
                           open ? "text-gray-900" : "text-gray-200",
-                          "group bg-purple-400 rounded-md inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          "group bg-purple-300 rounded-md inline-flex items-center text-base font-medium hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>Services</span>
@@ -146,12 +146,12 @@ export const NavMain = () => {
                 >
                   Why pay for professional advice?
                 </NavLink>
-                <a
-                  href="#"
+                <NavLink
+                  to="/blog"
                   className="text-base font-medium text-gray-200 hover:text-gray-900"
                 >
                   Blog
-                </a>
+                </NavLink>
                 <NavLink
                   to="/fees"
                   className="text-base font-medium text-gray-200 hover:text-gray-900"

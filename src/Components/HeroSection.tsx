@@ -5,7 +5,7 @@ export const HeroSection = () => {
     <div className="relative bg-yellow-300">
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-purple-400"
+        className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-purple-300"
       />
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-yellow-300" />
       <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">

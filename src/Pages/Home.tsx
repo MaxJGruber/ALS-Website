@@ -5,6 +5,8 @@ import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
 import changeLanguage from "../Redux/languageContent";
+import logoN26 from "../Assets/logo-n26.png";
+import quickbooksLogo from "../Assets/quickbooks-logo.png";
 
 const metrics = [
   {
@@ -35,7 +37,7 @@ const metrics = [
 
 export default function Home() {
   return (
-    <div className="bg-purple-400">
+    <div className="bg-purple-300">
       <NavMain />
 
       <main>
@@ -56,17 +58,13 @@ export default function Home() {
                 />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                  alt="Mirage"
-                />
+                <img className="h-12" src={logoN26} alt="N 26 Logo" />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
                 <img
                   className="h-12"
-                  src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                  alt="StaticKit"
+                  src={quickbooksLogo}
+                  alt="QuickBooks Logo"
                 />
               </div>
               <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">

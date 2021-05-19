@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./Pages/Home";
 import { ContactUs } from "./Pages/ContactUs";
-import { FranceAndAdvice } from "./Pages/France&Advice";
+import { FranceAndAdvice } from "./Pages/WhyUs";
 import { Fees } from "./Pages/Fees";
 import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";

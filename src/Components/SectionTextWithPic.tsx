@@ -1,3 +1,5 @@
+import changeLanguage from "../Redux/languageContent";
+
 export default function SectionTextWithPic() {
   return (
     <div className="relative bg-white">
@@ -14,17 +16,27 @@ export default function SectionTextWithPic() {
         <div className="lg:col-start-2 lg:pl-8">
           <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
             <h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
-              Work with us
+              Let us do the work
             </h2>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Our Process
+              {changeLanguage().ProfessionalAdvice.title}
             </h3>
-            <p className="mt-8 text-lg text-gray-500">
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
-              urna sed consectetur neque tristique pellentesque. Blandit amet,
-              sed aenean erat arcu morbi.
-            </p>
             <div className="mt-5 prose prose-indigo text-gray-500">
+              <p>{changeLanguage().ProfessionalAdvice.para1}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para2}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para3}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para4}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para5}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para6}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para7}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para8}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para9}</p>
+              <p>{changeLanguage().ProfessionalAdvice.para10}</p>
+
+              <p>{changeLanguage().ProfessionalAdvice.conclusion1}</p>
+              <p>{changeLanguage().ProfessionalAdvice.conclusion2}</p>
+            </div>
+            {/* <div className="mt-5 prose prose-indigo text-gray-500">
               <p>
                 Sollicitudin tristique eros erat odio sed vitae, consequat
                 turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
@@ -71,7 +83,7 @@ export default function SectionTextWithPic() {
                 imperdiet ac eros, diam mauris, tortor. Risus id sit molestie
                 magna.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

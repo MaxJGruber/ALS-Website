@@ -21,7 +21,7 @@ const growthFeatures = [
 
 export default function GeneralPricing() {
   return (
-    <div className="bg-yellow-400">
+    <div className="bg-yellow-300">
       <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
         <div className="text-center">
           <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
@@ -45,7 +45,7 @@ export default function GeneralPricing() {
 
       <div className="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
         <div className="relative z-0">
-          <div className="absolute inset-0 h-5/6 bg-yellow-400 lg:h-2/3" />
+          <div className="absolute inset-0 h-5/6 bg-yellow-300 lg:h-2/3" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative lg:grid lg:grid-cols-7">
               <div className="mx-auto max-w-md lg:mx-0 lg:max-w-none lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3">
