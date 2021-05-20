@@ -21,7 +21,7 @@ export default function SectionTextWithPic() {
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               {changeLanguage().ProfessionalAdvice.title}
             </h3>
-            <div className="mt-5 prose prose-indigo text-gray-500">
+            <div className="mt-5 text-left prose prose-indigo text-gray-500">
               <p>{changeLanguage().ProfessionalAdvice.para1}</p>
               <p>{changeLanguage().ProfessionalAdvice.para2}</p>
               <p>{changeLanguage().ProfessionalAdvice.para3}</p>

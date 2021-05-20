@@ -84,10 +84,10 @@ export default function HealthCare() {
           </svg>
           <div className="relative md:bg-white md:p-6">
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
-              <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+              <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
                 {changeLanguage().healthCare.intro.map((elem: string) => (
                   <p>{elem}</p>
-                ))}{" "}
+                ))}
                 <p>
                   <strong>
                     {changeLanguage().healthCare.introConclusionStart}
@@ -103,8 +103,6 @@ export default function HealthCare() {
                     )
                   )}
                 </ul>
-              </div>
-              <div className="mt-6 prose prose-indigo prose-lg text-gray-500 lg:mt-0">
                 <p>{changeLanguage().healthCare.warnings}</p>
                 <p>{changeLanguage().healthCare.PUMALaw}</p>
                 <ul>
@@ -115,14 +113,58 @@ export default function HealthCare() {
                   )}
                 </ul>
               </div>
+              <div className="mt-6 text-left prose prose-indigo prose-lg text-gray-500 lg:mt-0">
+                <p>{changeLanguage().healthCare.differentDoorsTitle}</p>
+                <ul>
+                  <li>
+                    <strong>{changeLanguage().healthCare.door1Intro}</strong>
+                    &nbsp;
+                    {changeLanguage().healthCare.door1Suite}
+                  </li>
+                  <li>
+                    <strong>{changeLanguage().healthCare.door2Intro}</strong>
+                    &nbsp;
+                    {changeLanguage().healthCare.door2Suite}
+                    <br />
+                    {changeLanguage().healthCare.door2NB.map((elem: string) => (
+                      <>
+                        <br />
+                        <i>{elem}</i>
+                        <br />
+                      </>
+                    ))}
+                  </li>
+                  <li>
+                    <strong>{changeLanguage().healthCare.door3Intro}</strong>
+                    &nbsp;
+                    {changeLanguage().healthCare.door3Suite}
+                  </li>
+                  <li>
+                    <strong>{changeLanguage().healthCare.door4Intro}</strong>
+                    &nbsp;
+                    {changeLanguage().healthCare.door4Suite}
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="mt-8 inline-flex rounded-md shadow">
-              <a
-                href="#"
-                className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Contact sales
-              </a>
+            <div className="mt-8">
+              <p className=" text-xl text-center leading-6 font-extrabold tracking-tight text-gray-900 sm:text-xl">
+                F.A.Q.
+              </p>
+              <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
+                <p>
+                  {changeLanguage().healthCare.faq.map(
+                    (elem: { question: string; answer: string[] }) => (
+                      <>
+                        <p className="font-bold">{elem.question}</p>
+                        {elem.answer.map((elem: string) => (
+                          <p>{elem}</p>
+                        ))}
+                      </>
+                    )
+                  )}
+                </p>
+              </div>
             </div>
           </div>
         </div>

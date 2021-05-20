@@ -49,7 +49,7 @@ function classNames(...classes: string[]) {
 export const NavMain = () => {
   return (
     <header>
-      <Popover className="relative bg-light-pastel-purple">
+      <Popover className="relative bg-pink-900">
         {({ open }) => (
           <>
             <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-6 sm:px-6 md:justify-start md:space-x-10 ">

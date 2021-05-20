@@ -86,16 +86,18 @@ export default function SocialCharges() {
             />
           </svg>
           <div className="relative md:bg-white md:p-6">
-            <div className="prose prose-indigo prose-lg text-gray-500 lg:max-w-none">
+            <div className="prose text-left prose-indigo prose-lg text-gray-500 lg:max-w-none">
               {changeLanguage().taxesAndSocialCharges.introduction.map(
                 (elem) => (
                   <p>{elem}</p>
                 )
               )}
               {changeLanguage().taxesAndSocialCharges.warning.map((elem) => (
-                <p className="font-bold">{elem}</p>
+                <p className="font-bold text-center">{elem}</p>
               ))}
-              <p>{changeLanguage().taxesAndSocialCharges.taxes}</p>
+              <p className="text-center">
+                {changeLanguage().taxesAndSocialCharges.taxes}
+              </p>
               <span className="relative z-0 flex flex-col sm:flex-row inline-flex shadow-sm rounded-md">
                 <button
                   type="button"
