@@ -78,8 +78,7 @@ export default function BlogSection() {
             From the blog
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-            libero labore natus atque, ducimus sed.
+           Check out our stories from Medium!
           </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
@@ -97,7 +96,12 @@ export default function BlogSection() {
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <p className="text-sm font-medium text-indigo-600 hover:underline">
-                  <a href={post.link} target="_blank" title="Medium story">
+                  <a
+                    href={post.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Medium story"
+                  >
                     Read the story in full
                   </a>
                 </p>
@@ -106,10 +110,10 @@ export default function BlogSection() {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.title}
                     </p>
-                    {/* <p className="mt-3 text-base text-gray-500">
-                      {console.log(typeof new DOMParser().parseFromString(post.description, "text/xml"))}
-                      {post.description}
-                    </p> */}
+               
+                      {/* {console.log(new DOMParser().parseFromString(post.description, "text/xml"))} */}
+                      {/* {post.description} */}
+                  
                   </a>
                 </div>
                 <div className="mt-6 flex items-center">
@@ -128,6 +132,7 @@ export default function BlogSection() {
                       <a
                         href="https://www.linkedin.com/in/madeline-aveson-gruber-66a6b06/"
                         target="_blank"
+                        rel="noreferrer"
                         title="LinkedIn Madeline Aveson"
                         className="hover:underline"
                       >

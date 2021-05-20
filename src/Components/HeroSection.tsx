@@ -2,14 +2,14 @@ import introPic from "../Assets/living-in-france.jpeg";
 
 export const HeroSection = () => {
   return (
-    <div className="relative bg-yellow-300">
-      <div
+    <div className="relative">
+      {/* <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-purple-300"
-      />
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-yellow-300" />
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+      /> */}
+      {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-pale-cornflower-blue" />
+      <div className="max-w-7xl mx-auto py-5 sm:px-6 lg:px-8">
+        <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden"> */}
           <div className="absolute inset-0">
             <img
               className="h-full w-full object-cover"
@@ -23,14 +23,14 @@ export const HeroSection = () => {
           </div>
           <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
             <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="block text-white">
+              <span className="block text-pastel-yellow">
                 The key to your new life in France
               </span>
-              <span className="block text-indigo-200">
+              <span className="block text-light-pastel-purple">
                 Aquitaine Lifestyle Solutions
               </span>
             </h1>
-            <p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+            <p className="mt-6 max-w-lg mx-auto text-center text-xl text-conditioner-yellow sm:max-w-3xl">
               Want To Relocate Or Invest In Property In South West France?
               <br />
               Have you already moved or invested and need advice and help?
@@ -53,7 +53,7 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      // </div>
+    // </div>
   );
 };

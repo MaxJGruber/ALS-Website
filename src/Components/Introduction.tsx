@@ -5,10 +5,10 @@ import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
 export const Introduction = () => {
   return (
     <div className="relative pt-16 pb-32 overflow-hidden">
-      <div
+      {/* <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-yellow-300"
-      />
+      /> */}
       <div className="relative">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
           <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -25,12 +25,12 @@ export const Introduction = () => {
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                   Let us handle your affairs so that you don't have to!
                 </h2>
-                <p className="mt-4 text-lg text-gray-200">
+                <p className="mt-4 text-lg text-pastel-yellow">
                   Aquitaine Lifestyle Solutions provides professional solutions
                   in all aspects concerning Financial Advice, Real Estate,
                   Relocation Services and Property Management.
                 </p>
-                <p className="mt-4 text-lg text-gray-200">
+                <p className="mt-4 text-lg text-pastel-yellow">
                   Whether you need assistance with everything or just certain
                   parts, make life easy for yourself and contact us for more
                   information about packages or à la carte services.

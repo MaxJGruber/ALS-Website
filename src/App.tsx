@@ -8,6 +8,7 @@ import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";
 import store from "./Redux/store";
 import { connect } from "react-redux";
+import { LivingAndWorking } from "./Pages/Living&Working";
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setContent: (content: Record<string, any>) =>
@@ -53,13 +54,8 @@ function App() {
         />
         <Route
           exact
-          path="/living-working-in-france/healthcare-cover"
-          component={FranceAndAdvice}
-        />
-        <Route
-          exact
-          path="/living-working-in-france/french-taxes-social-charges"
-          component={FranceAndAdvice}
+          path="/living-working-in-france"
+          component={LivingAndWorking}
         />
         <Route exact path="/fees" component={Fees} />
         <Route exact path="/blog" component={Blog} />
