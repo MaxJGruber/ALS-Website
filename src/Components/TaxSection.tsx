@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import changeLanguage from "../Redux/languageContent";
+import changeLanguage from "../redux/languageContent";
 
 export default function TaxSection(props: Record<string, any>) {
   const [selectedTax, setSelectedTax] = useState<Record<string, any>>({});

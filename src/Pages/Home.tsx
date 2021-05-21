@@ -4,7 +4,7 @@ import { Introduction } from "../Components/Introduction";
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
-import changeLanguage from "../Redux/languageContent";
+import changeLanguage from "../redux/languageContent";
 import logoN26 from "../Assets/logo-n26.png";
 import quickbooksLogo from "../Assets/quickbooks-logo.png";
 

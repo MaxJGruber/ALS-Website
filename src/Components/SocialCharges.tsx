@@ -1,5 +1,5 @@
 import { useState } from "react";
-import changeLanguage from "../Redux/languageContent";
+import changeLanguage from "../redux/languageContent";
 import TaxSection from "./TaxSection";
 
 export default function SocialCharges() {

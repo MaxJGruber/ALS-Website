@@ -6,7 +6,7 @@ import { FranceAndAdvice } from "./Pages/WhyUs";
 import { Fees } from "./Pages/Fees";
 import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";
-import store from "./Redux/store";
+import store from "./redux/store";
 import { connect } from "react-redux";
 import { LivingAndWorking } from "./Pages/Living&Working";
 
