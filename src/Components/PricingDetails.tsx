@@ -17,23 +17,8 @@ const plans = [
     ],
   },
   {
-    title: "Premium",
-    featured: true,
-    description: "Convenient features to take your business to the next level.",
-    priceMonthly: 832,
-    priceYearly: 2495,
-    mainFeatures: [
-      { id: 1, value: "Integration into the French health system" },
-      { id: 2, value: "Advances estimate of future tax burdens and inheritance tax" },
-      { id: 3, value: "Financial study " },
-      { id: 4, value: "Setting up of contracts with utility providers" },
-      { id: 5, value: "General administrative help - 10 Hours" },
-      { id: 6, value: "Creation of a gite or bed & breakfast activity or self-employed status" },
-    ],
-  },
-  {
     title: "Standard Plus",
-    featured: false,
+    featured: true,
     description: "The best financial services for your thriving business.",
     priceMonthly: 565,
     priceYearly: 1695,
@@ -42,6 +27,28 @@ const plans = [
       { id: 2, value: "Easy to use accounting" },
       { id: 3, value: "Mutli-accounts" },
       { id: 4, value: "Tax planning toolkit" },
+    ],
+  },
+  {
+    title: "Premium",
+    featured: false,
+    description: "Convenient features to take your business to the next level.",
+    priceMonthly: 832,
+    priceYearly: 2495,
+    mainFeatures: [
+      { id: 1, value: "Integration into the French health system" },
+      {
+        id: 2,
+        value: "Advances estimate of future tax burdens and inheritance tax",
+      },
+      { id: 3, value: "Financial study " },
+      { id: 4, value: "Setting up of contracts with utility providers" },
+      { id: 5, value: "General administrative help - 10 Hours" },
+      {
+        id: 6,
+        value:
+          "Creation of a gite or bed & breakfast activity or self-employed status",
+      },
     ],
   },
 ];

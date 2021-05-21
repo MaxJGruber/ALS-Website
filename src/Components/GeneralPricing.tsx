@@ -111,7 +111,7 @@ export default function GeneralPricing() {
                   />
                   <div className="absolute inset-x-0 top-0 transform translate-y-px">
                     <div className="flex justify-center transform -translate-y-1/2">
-                      <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+                      <span className="inline-flex rounded-full bg-african-violet-600 px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
                         Most popular
                       </span>
                     </div>
@@ -157,7 +157,7 @@ export default function GeneralPricing() {
                       <div className="rounded-lg shadow-md">
                         <a
                           href="#"
-                          className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-700"
+                          className="block w-full text-center rounded-lg border border-transparent bg-african-violet-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-african-violet-700"
                           aria-describedby="tier-growth"
                         >
                           See more details

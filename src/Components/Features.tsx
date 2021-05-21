@@ -1,98 +1,93 @@
-import {
-  GlobeAltIcon,
-  LightningBoltIcon,
-  MailIcon,
-  ScaleIcon,
-} from "@heroicons/react/outline";
-
-const features = [
+import photo1 from "../Assets/real-estate.jpeg";
+import photo2 from "../Assets/ALS2.jpeg";
+import photo3 from "../Assets/ALS1.jpeg";
+import photo4 from "../Assets/property-management-services.jpeg";
+const posts = [
   {
-    name: "Real Estate",
+    title: "Real Estate",
+    href: "#",
+
     description:
       "Do you dream about buying a property in France, whether it is a holiday home or a permanent move, but just don’t know where to start?",
-    icon: GlobeAltIcon,
+
+    imageUrl: photo1,
   },
   {
-    name: "Property Management",
+    title: "Property Management",
+    href: "#",
     description:
       "Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.",
-    icon: ScaleIcon,
+
+    imageUrl: photo2,
   },
   {
-    name: "Financial Advice",
+    title: "Financial Advice",
+    href: "#",
+
     description:
       "When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.",
-    icon: LightningBoltIcon,
+
+    imageUrl: photo3,
   },
   {
-    name: "Relocation Services",
+    title: "Relocation Services",
+    href: "#",
+
     description:
       "Relocating to France means dealing with the legendary French Administration. Let us deal with that!",
-    icon: MailIcon,
+
+    imageUrl: photo4,
   },
 ];
 
-export default function Features() {
+export default function Products() {
   return (
-    <div className="bg-gray-50 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <svg
-          className="absolute top-0 left-full transform -translate-x-1/2 -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
-          width={404}
-          height={784}
-          fill="none"
-          viewBox="0 0 404 784"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="8b1b5f72-e944-4457-af67-0c6d15a99f38"
-              x={0}
-              y={0}
-              width={20}
-              height={20}
-              patternUnits="userSpaceOnUse"
+    <div className="relative bg-logo-blue pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+      <div className="absolute inset-0">
+        <div className="bg-logo-blue h-1/3 sm:h-2/3" />
+      </div>
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center">
+          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+            A Full Range Of Services Under One Roof
+          </h2>
+        </div>
+        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 lg:max-w-none">
+          {posts.map((post) => (
+            <div
+              key={post.title}
+              className="flex flex-col rounded-lg shadow-lg overflow-hidden"
             >
-              <rect
-                x={0}
-                y={0}
-                width={4}
-                height={4}
-                className="text-gray-200"
-                fill="currentColor"
-              />
-            </pattern>
-          </defs>
-          <rect
-            width={404}
-            height={784}
-            fill="url(#8b1b5f72-e944-4457-af67-0c6d15a99f38)"
-          />
-        </svg>
-
-        <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
-          <div className="lg:col-span-1">
-            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              A Full Range Of Services Under One Roof
-            </h2>
-          </div>
-          <dl className="mt-10 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 lg:mt-0 lg:col-span-2">
-            {features.map((feature) => (
-              <div key={feature.name}>
-                <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
-                    {feature.name}
-                  </p>
-                </dt>
-                <dd className="mt-2 text-base text-gray-500">
-                  {feature.description}
-                </dd>
+              <div className="flex-shrink-0">
+                <img
+                  className="h-48 w-full object-cover"
+                  src={post.imageUrl}
+                  alt=""
+                />
               </div>
-            ))}
-          </dl>
+              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-indigo-600">
+                    <a href={post.href} className="hover:underline">
+                      {post.title}
+                    </a>
+                  </p>
+                  <a href={post.href} className="block mt-2">
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.title}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      {post.description}
+                    </p>
+                  </a>
+                </div>
+                <div className="mt-6 flex items-center">
+                  <div className="flex-shrink-0"></div>
+                  <div className="ml-3"></div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

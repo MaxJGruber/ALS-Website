@@ -14,7 +14,7 @@ export const Introduction = () => {
           <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
             <div>
               <div>
-                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
+                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-african-violet">
                   <InboxIcon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
@@ -48,7 +48,7 @@ export const Introduction = () => {
             <div className="mt-8 border-t border-gray-200 pt-6">
               <blockquote>
                 <div>
-                  <p className="text-base text-gray-200">
+                  <p className="text-base text-gray-900">
                     Real Estate and Property Management Services cover the
                     Aquitaine region. Financial and Relocation Services cover
                     all regions.
@@ -73,7 +73,7 @@ export const Introduction = () => {
           <div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
             <div>
               <div>
-                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
+                <span className="h-12 w-12 rounded-md flex items-center justify-center bg-african-violet">
                   <SparklesIcon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
@@ -84,12 +84,12 @@ export const Introduction = () => {
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                   Expert advice for the best of services
                 </h2>
-                <p className="mt-4 text-lg text-gray-200">
+                <p className="mt-4 text-lg text-gray-900">
                   Our team of experts can provide you with all the services you
                   need under one roof to help open the door to your new
                   lifestyle, including:
                 </p>
-                <ul className="mt-4 text-lg text-gray-200">
+                <ul className="mt-4 text-lg text-gray-900">
                   <li>Finding your property and the buying process</li>
                   <li>Everything you need to do when you relocate</li>
                   <li>Help setting up your business</li>

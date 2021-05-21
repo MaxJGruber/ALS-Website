@@ -4,7 +4,6 @@ import { Introduction } from "../Components/Introduction";
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import { NavLink } from "react-router-dom";
-import changeLanguage from "../redux/languageContent";
 import logoN26 from "../Assets/logo-n26.png";
 import quickbooksLogo from "../Assets/quickbooks-logo.png";
 
@@ -37,12 +36,51 @@ const metrics = [
 
 export default function Home() {
   return (
-    <div className="bg-light-pastel-purple">
-      <NavMain />
-
+    <div className="bg-logo-blue">
       <main>
+        <NavMain />
         <HeroSection />
-
+        {/* Logo Cloud */}
+        <div className="bg-logo-blue">
+          <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+              Here's who we work with
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <img
+                  className="h-12"
+                  src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
+                  alt="Tuple"
+                />
+              </div>
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <img className="h-12" src={logoN26} alt="N 26 Logo" />
+              </div>
+              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                <img
+                  className="h-12"
+                  src={quickbooksLogo}
+                  alt="QuickBooks Logo"
+                />
+              </div>
+              <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+                <img
+                  className="h-12"
+                  src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
+                  alt="Transistor"
+                />
+              </div>
+              <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
+                <img
+                  className="h-12"
+                  src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
+                  alt="Workcation"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Alternating Feature Sections */}
         <Introduction />
 
@@ -101,67 +139,26 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Logo Cloud */}
-        <div className="bg-gray-100">
-          <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-              Here's who we work with
-            </p>
-            <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                  alt="Tuple"
-                />
-              </div>
-              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img className="h-12" src={logoN26} alt="N 26 Logo" />
-              </div>
-              <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src={quickbooksLogo}
-                  alt="QuickBooks Logo"
-                />
-              </div>
-              <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                  alt="Transistor"
-                />
-              </div>
-              <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                <img
-                  className="h-12"
-                  src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                  alt="Workcation"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="bg-white">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               <span className="block">Ready to start a new life?</span>
-              <span className="block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="block bg-african-violet bg-clip-text text-transparent">
                 Keep calm & get in touch.
               </span>
             </h2>
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
               <NavLink
                 to="/contact-us"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-african-violet hover:from-purple-700 hover:to-indigo-700"
               >
                 Contact us
               </NavLink>
               <a
                 href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-indigo-100"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-african-violet"
               >
                 Learn more
               </a>

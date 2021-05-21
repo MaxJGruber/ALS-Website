@@ -4,12 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "pale-cornflower-blue": "#A6CDE5",
-        "light-pastel-purple": "#B49EDE",
-        "pastel-yellow": "#FCFC94",
-        "dark-pastel-blue": "#759ECD",
-        "conditioner-yellow": "#FAFFCB",
-        "vodka-purple": "#C6B4E9",
+        "logo-blue": "#e7f3ff",
+        "african-violet": "#AA78A6",
+        "lavender-gray": "#B8BAC8",
+        "opal-gray": "#B4D6D3",
       },
     },
   },

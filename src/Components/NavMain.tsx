@@ -49,7 +49,7 @@ function classNames(...classes: string[]) {
 export const NavMain = () => {
   return (
     <header>
-      <Popover className="relative bg-pink-900">
+      <Popover className="relative">
         {({ open }) => (
           <>
             <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-6 sm:px-6 md:justify-start md:space-x-10 ">
@@ -65,7 +65,7 @@ export const NavMain = () => {
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
                 <NavLink
                   to="/"
-                  className="text-base font-medium text-gray-200 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900 hover:text-pastel-yellow"
                 >
                   Home
                 </NavLink>
@@ -74,8 +74,8 @@ export const NavMain = () => {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-200",
-                          "group bg-light-pastel-purple rounded-md inline-flex items-center text-base font-medium hover:text-pastel-yellow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          open ? "text-gray-900" : "text-gray-900 ",
+                          "group rounded-md inline-flex items-center text-base font-medium hover:text-pastel-yellow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>Services</span>
@@ -136,25 +136,25 @@ export const NavMain = () => {
 
                 <NavLink
                   to="/living-working-in-france"
-                  className="text-base font-medium text-gray-200 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
                   Living & Working in France
                 </NavLink>
                 <NavLink
                   to="/why-pay-for-professional-advice"
-                  className="text-base font-medium text-gray-200 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
                   Why pay for professional advice?
                 </NavLink>
                 <NavLink
                   to="/blog"
-                  className="text-base font-medium text-gray-200 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
                   Blog
                 </NavLink>
                 <NavLink
                   to="/fees"
-                  className="text-base font-medium text-gray-200 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
                   Fees
                 </NavLink>
@@ -162,7 +162,7 @@ export const NavMain = () => {
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <span className="inline-flex rounded-md shadow">
                   <NavLink
-                    to="contact-us"
+                    to="/contact-us"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
                   >
                     Contact Us
@@ -190,11 +190,7 @@ export const NavMain = () => {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
-                          className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                          alt="Workflow"
-                        />
+                        <img className="h-8 w-auto" src={logo} alt="ALS Logo" />
                       </div>
                       <div className="-mr-2">
                         <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -227,38 +223,38 @@ export const NavMain = () => {
                   </div>
                   <div className="py-6 px-5">
                     <div className="grid grid-cols-2 gap-4">
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                      <NavLink
+                        to="/living-working-in-france"
+                        className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Pricing
-                      </a>
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        Living & Working in France
+                      </NavLink>
+                      <NavLink
+                        to="/why-pay-for-professional-advice"
+                        className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Partners
-                      </a>
-                      <a
-                        href="#"
-                        className="text-base font-medium text-gray-900 hover:text-gray-700"
+                        Why pay for professional advice?
+                      </NavLink>
+                      <NavLink
+                        to="/blog"
+                        className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Company
-                      </a>
+                        Blog
+                      </NavLink>
+                      <NavLink
+                        to="/fees"
+                        className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
+                      >
+                        Fees
+                      </NavLink>
                     </div>
                     <div className="mt-6">
-                      <a
-                        href="#"
+                      <NavLink
+                        to="/contact-us"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                       >
-                        Sign up
-                      </a>
-                      <p className="mt-6 text-center text-base font-medium text-gray-500">
-                        Existing customer?
-                        <a href="#" className="text-gray-900">
-                          Sign in
-                        </a>
-                      </p>
+                        Contact Us
+                      </NavLink>
                     </div>
                   </div>
                 </div>
