@@ -1,3 +1,4 @@
+import changeLanguage from "../redux/languageContent";
 import introPic from "../Assets/living-in-france.jpeg";
 
 export const HeroSection = () => {
@@ -24,16 +25,16 @@ export const HeroSection = () => {
           <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
             <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
               <span className="block text-african-violet">
-                The key to your new life in France
+                {changeLanguage().heroSection.taglinePart1}
               </span>
               <span className="block text-logo-blue">
                 Aquitaine Lifestyle Solutions
               </span>
             </h1>
             <p className="mt-6 max-w-lg mx-auto text-center text-xl text-logo-blue sm:max-w-3xl">
-              Want To Relocate Or Invest In Property In South West France?
+            {changeLanguage().heroSection.hook1}
               <br />
-              Have you already moved or invested and need advice and help?
+              {changeLanguage().heroSection.hook2}
             </p>
             <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
               {/* <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"> */}
@@ -41,7 +42,7 @@ export const HeroSection = () => {
                 href="#"
                 className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-african-violet-50 sm:px-8"
               >
-                Check out what we have to offer
+                {changeLanguage().heroSection.button}
               </a>
               {/* <a
                   href="#"

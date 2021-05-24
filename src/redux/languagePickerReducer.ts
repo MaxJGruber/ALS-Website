@@ -1,17 +1,44 @@
-const { language } = localStorage;
+let language: string | void | null;
+
+function hasLanguageSessionStorage(languageState: string | undefined) {
+  if (languageState === undefined) {
+    try {
+      try {
+        language = sessionStorage.getItem("language");
+        if (language === null) {
+          language = "en";
+          return language;
+        }
+        return language;
+      } catch (error) {
+        language = "en";
+        return language;
+      }
+    } catch (error) {
+      language = "en";
+      return language;
+    }
+  } else {
+    try {
+      sessionStorage.setItem("language", languageState);
+      return language;
+    } catch (error) {
+      language = languageState;
+      return language;
+    }
+  }
+}
 export default function languagePickerReducer(
-  state = { language },
+  state = { language: hasLanguageSessionStorage(undefined) },
   action: Record<string, any>
 ) {
-  // console.log(action);
   switch (action.type) {
     case "SET_LANGUAGE":
-      localStorage.setItem("language", action.language);
+      console.log(action.language);
+      hasLanguageSessionStorage(action.language);
       let x = { ...state, language: action.language };
       return x;
     default:
-      localStorage.setItem("language", state.language);
       return state;
   }
 }
-

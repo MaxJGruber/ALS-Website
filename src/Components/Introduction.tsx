@@ -1,5 +1,6 @@
 import gatePic from "../Assets/french-farm-house.jpeg";
 import housewallPic from "../Assets/buy-french-property.jpeg";
+import changeLanguage from "../redux/languageContent";
 import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
 
 export const Introduction = () => {
@@ -23,17 +24,13 @@ export const Introduction = () => {
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  Let us handle your affairs so that you don't have to!
+                  {changeLanguage().introduction.part1.title}
                 </h2>
                 <p className="mt-4 text-lg text-pastel-yellow">
-                  Aquitaine Lifestyle Solutions provides professional solutions
-                  in all aspects concerning Financial Advice, Real Estate,
-                  Relocation Services and Property Management.
+                  {changeLanguage().introduction.part1.description1}
                 </p>
                 <p className="mt-4 text-lg text-pastel-yellow">
-                  Whether you need assistance with everything or just certain
-                  parts, make life easy for yourself and contact us for more
-                  information about packages or à la carte services.
+                  {changeLanguage().introduction.part1.description2}
                 </p>
                 <div className="mt-6">
                   <a
@@ -49,9 +46,7 @@ export const Introduction = () => {
               <blockquote>
                 <div>
                   <p className="text-base text-gray-900">
-                    Real Estate and Property Management Services cover the
-                    Aquitaine region. Financial and Relocation Services cover
-                    all regions.
+                    {changeLanguage().introduction.part1.warningText}
                   </p>
                 </div>
               </blockquote>
@@ -82,19 +77,20 @@ export const Introduction = () => {
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  Expert advice for the best of services
+                  {changeLanguage().introduction.part2.title}
                 </h2>
                 <p className="mt-4 text-lg text-gray-900">
-                  Our team of experts can provide you with all the services you
-                  need under one roof to help open the door to your new
-                  lifestyle, including:
+                  {changeLanguage().introduction.part2.description1}
                 </p>
                 <ul className="mt-4 text-lg text-gray-900">
-                  <li>Finding your property and the buying process</li>
+                  {changeLanguage().introduction.part2.list.map((elem, i) => (
+                    <li key={i}>{elem}</li>
+                  ))}
+                  {/* <li>Finding your property and the buying process</li>
                   <li>Everything you need to do when you relocate</li>
                   <li>Help setting up your business</li>
                   <li>How to deal with taxes, insurances and finances</li>
-                  <li>Project and property management</li>
+                  <li>Project and property management</li> */}
                 </ul>
                 <div className="mt-6">
                   <a

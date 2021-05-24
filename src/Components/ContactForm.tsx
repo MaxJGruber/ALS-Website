@@ -37,7 +37,7 @@ function Form(props: Record<string, any>) {
     if (sentStatus !== null) {
       props.setStatus(sentStatus);
     }
-  }, [sentStatus]);
+  }, [sentStatus, props]);
 
   // console.log(sentStatus);
   return (
@@ -65,7 +65,7 @@ function Form(props: Record<string, any>) {
               hesitate to get in touch and a member of our team will be happy to
               assist you.
             </p>
-            <p className="mt-4 text-lg text-gray-500 sm:mt-3">
+            <p className="mt-4 text-md text-gray-500 sm:mt-3">
               You can send us a message using the short form below. Mandatory
               fields are marked with a <span className="text-red-400">*</span>.
             </p>

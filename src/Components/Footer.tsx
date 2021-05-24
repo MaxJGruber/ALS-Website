@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import changeLanguage from "../redux/languageContent";
 import store from "../redux/store";
 import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
@@ -9,27 +10,6 @@ interface iconProps {
 }
 
 const footerNavigation = {
-  solutions: [
-    { name: "Real Estate", href: "#" },
-    { name: "Property Management", href: "#" },
-    { name: "Financial Advice", href: "#" },
-    { name: "Relocation Services", href: "#" },
-  ],
-  support: [
-    { name: "Fees", href: "/fees" },
-    { name: "Contact us", href: "/contact-us" },
-    // { name: "Guides", href: "#" },
-  ],
-  company: [
-    { name: "About us", href: "/team" },
-    { name: "Blog", href: "/blog" },
-    // { name: "Partners", href: "#" },
-  ],
-  legal: [
-    { name: "Policy", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
-  ],
   social: [
     {
       name: "Facebook",
@@ -68,7 +48,6 @@ const mapStateToProps = (state: Record<string, any>) => {
 function Footer(props: Record<string, any>) {
   const handleChange = (event: Record<string, any>) => {
     props.setLanguage(event.target.value);
-    localStorage.setItem("language", event.target.value);
   };
 
   function getdefaultValue(): string | undefined {
@@ -121,10 +100,10 @@ function Footer(props: Record<string, any>) {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Services
+                  {changeLanguage().footer.title1}
                 </h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.solutions.map((item) => (
+                  {changeLanguage().footer.solutions.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -138,10 +117,10 @@ function Footer(props: Record<string, any>) {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Support
+                  {changeLanguage().footer.title2}
                 </h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.support.map((item) => (
+                  {changeLanguage().footer.support.map((item) => (
                     <li key={item.name}>
                       <NavLink
                         to={item.href}
@@ -157,10 +136,10 @@ function Footer(props: Record<string, any>) {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Company
+                  {changeLanguage().footer.title3}
                 </h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.company.map((item) => (
+                  {changeLanguage().footer.company.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -174,10 +153,10 @@ function Footer(props: Record<string, any>) {
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                  Legal
+                  {changeLanguage().footer.title4}
                 </h3>
                 <ul className="mt-4 space-y-4">
-                  {footerNavigation.legal.map((item) => (
+                  {changeLanguage().footer.legal.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
@@ -193,7 +172,7 @@ function Footer(props: Record<string, any>) {
           </div>
           <div className="mt-12 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Switch language
+              {changeLanguage().footer.switch}
             </h3>
 
             <form className="mt-4 sm:flex sm:max-w-md justify-center">
@@ -224,7 +203,7 @@ function Footer(props: Record<string, any>) {
                   type="submit"
                   className="w-full bg-african-violet border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-african-violet-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
-                  Confirm
+                  {changeLanguage().footer.button}
                 </button>
               </div>
             </form>
@@ -232,7 +211,8 @@ function Footer(props: Record<string, any>) {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-center lg:mt-16">
           <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
-            &copy; 2021 Aquitaine Lifestyle Solution. All rights reserved.
+            &copy; 2021 Aquitaine Lifestyle Solution.{" "}
+            {changeLanguage().footer.rights}
           </p>
         </div>
       </div>

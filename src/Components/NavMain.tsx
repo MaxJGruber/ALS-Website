@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import changeLanguage from "../redux/languageContent";
 import { Popover, Transition } from "@headlessui/react";
 import {
   AnnotationIcon,
@@ -67,7 +68,7 @@ export const NavMain = () => {
                   to="/"
                   className="text-base font-medium text-gray-900 hover:text-pastel-yellow"
                 >
-                  Home
+                  {changeLanguage().navMain.navLinks.home}
                 </NavLink>
                 <Popover className="relative">
                   {({ open }) => (
@@ -78,7 +79,10 @@ export const NavMain = () => {
                           "group rounded-md inline-flex items-center text-base font-medium hover:text-pastel-yellow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
-                        <span>Services</span>
+                        <span>
+                          {" "}
+                          {changeLanguage().navMain.navLinks.services}
+                        </span>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "text-gray-900" : "text-gray-200",
@@ -138,25 +142,25 @@ export const NavMain = () => {
                   to="/living-working-in-france"
                   className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
-                  Living & Working in France
+                  {changeLanguage().navMain.navLinks.livingAndWorking}
                 </NavLink>
                 <NavLink
                   to="/why-pay-for-professional-advice"
                   className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
-                  Why pay for professional advice?
+                  {changeLanguage().navMain.navLinks.whyPay}
                 </NavLink>
                 <NavLink
                   to="/blog"
                   className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
-                  Blog
+                  {changeLanguage().navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
                   to="/fees"
                   className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                 >
-                  Fees
+                  {changeLanguage().navMain.navLinks.fees}
                 </NavLink>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -165,7 +169,7 @@ export const NavMain = () => {
                     to="/contact-us"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
                   >
-                    Contact Us
+                    {changeLanguage().navMain.navLinks.contact}
                   </NavLink>
                 </span>
               </div>
@@ -227,25 +231,25 @@ export const NavMain = () => {
                         to="/living-working-in-france"
                         className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Living & Working in France
+                        {changeLanguage().navMain.navLinks.livingAndWorking}
                       </NavLink>
                       <NavLink
                         to="/why-pay-for-professional-advice"
                         className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Why pay for professional advice?
+                        {changeLanguage().navMain.navLinks.whyPay}
                       </NavLink>
                       <NavLink
                         to="/blog"
                         className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Blog
+                        {changeLanguage().navMain.navLinks.blog}
                       </NavLink>
                       <NavLink
                         to="/fees"
                         className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
                       >
-                        Fees
+                        {changeLanguage().navMain.navLinks.fees}
                       </NavLink>
                     </div>
                     <div className="mt-6">
@@ -253,7 +257,7 @@ export const NavMain = () => {
                         to="/contact-us"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                       >
-                        Contact Us
+                        {changeLanguage().navMain.navLinks.contact}
                       </NavLink>
                     </div>
                   </div>

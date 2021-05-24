@@ -189,7 +189,7 @@ export default function PricingSection() {
             <div className="relative max-w-2xl mx-auto pt-10 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
                 <span className="block lg:inline">Simple pricing,</span>
-                <span className="block lg:inline">no commitment.</span>
+                <span className="block lg:inline">&nbsp;no commitment.</span>
               </h1>
               <p className="mt-4 text-xl text-indigo-100">
                 We offer packages and à la carte services. Our services are
