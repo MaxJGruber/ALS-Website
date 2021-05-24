@@ -46,7 +46,7 @@ function Form(props: Record<string, any>) {
         <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img
             className="h-56 w-full object-cover lg:absolute lg:h-full"
-            src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
+            src="https://images.unsplash.com/photo-1507831228884-93d43e81a99d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3032&q=80"
             alt=""
           />
         </div>
@@ -248,12 +248,22 @@ function Form(props: Record<string, any>) {
                   How did you hear about us?
                 </label>
                 <div className="mt-1">
-                  <input
-                    type="text"
+                  <select
                     name="how_did_you_hear_about_us"
                     id="how_did_you_hear_about_us"
+                    defaultValue="-1"
                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                  />
+                  >
+                    <option value="-1">Select an option</option>
+                    <option value="website">The website</option>
+                    <option value="recommendation">
+                      A friend/aquaintance recommended it
+                    </option>
+                    <option value="facebook">On FaceBook</option>
+                    <option value="google">On Google</option>
+                    <option value="newspapers">Newspapers</option>
+                    <option value="blogs">Blogs</option>
+                  </select>
                 </div>
               </div>
               <div className="text-right sm:col-span-2">
