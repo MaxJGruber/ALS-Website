@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { connect } from "react-redux";
 import { submitForm } from "../ApiHandlers/wufooApi";
+import { countryList } from "../Content/countryList";
 
-export default function Form(props: Record<string, any>) {
+const mapDispatchToProps = (dispatch: Function) => ({
+  setStatus: (status: boolean) => dispatch({ type: "SET_STATUS", status }),
+});
+const mapStateToProps = (state: Record<string, any>) => {
+  return { sendstatus: state.sendstatus };
+};
+
+function Form(props: Record<string, any>) {
   const [form, setForm] = useState<Record<string, any>>({});
+  const [sentStatus, setSentStatus] = useState<Boolean | null>(null);
 
   function handleChange(e: Record<string, any>) {
     const newForm: Record<string, any> = { ...form };
@@ -17,10 +27,19 @@ export default function Form(props: Record<string, any>) {
     e: Record<string, any>
   ): Promise<number | undefined> {
     e.preventDefault();
-    console.log("SUBMIT FUNC");
-    return submitForm(form);
+    const response = await submitForm(form);
+    console.log(response);
+    response === 201 ? setSentStatus(true) : setSentStatus(false);
+    return response;
   }
-  console.log(props);
+
+  useEffect(() => {
+    if (sentStatus !== null) {
+      props.setStatus(sentStatus);
+    }
+  }, [sentStatus]);
+
+  // console.log(sentStatus);
   return (
     <div className="relative bg-white">
       <div className="lg:absolute lg:inset-0">
@@ -99,9 +118,10 @@ export default function Form(props: Record<string, any>) {
                 <div className="mt-1">
                   <input
                     id="email"
-                    name="email"
+                    name="Field4"
                     type="email"
                     autoComplete="email"
+                    onChange={handleChange}
                     className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   />
                 </div>
@@ -148,13 +168,22 @@ export default function Form(props: Record<string, any>) {
                   Country
                 </label>
                 <div className="mt-1">
-                  <input
-                    type="text"
+                  <select
                     name="country"
                     id="country"
                     autoComplete="country"
+                    defaultValue="-1"
                     className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  />
+                  >
+                    <option disabled value="-1">
+                      Select a Country
+                    </option>
+                    {countryList.map((country, i) => (
+                      <option value={country} key={i}>
+                        {country}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
               <div className="sm:col-span-2">
@@ -243,3 +272,5 @@ export default function Form(props: Record<string, any>) {
     </div>
   );
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

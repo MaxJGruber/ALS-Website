@@ -13,10 +13,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors({
-  origin: `http://localhost:${config.PORT}`,
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: `http://localhost:${config.PORT}`,
+    credentials: true,
+  })
+);
 
 app.post("/submit-form", async (req: Request, res: Response) => {
   try {
@@ -24,8 +26,12 @@ app.post("/submit-form", async (req: Request, res: Response) => {
     for (var key in req.body) {
       formData.append(key, req.body[key]);
     }
-    await submitForm(formData);
-    res.sendStatus(201);
+    const data = await submitForm(formData);
+    if (data.Success === 1) {
+      res.sendStatus(201);
+    } else {
+      throw Error;
+    }
   } catch (error) {
     console.log(error);
     res.sendStatus(400);

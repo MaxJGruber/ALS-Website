@@ -92,10 +92,18 @@ function Footer(props: Record<string, any>) {
         <div className="xl:grid xl:grid-cols-4 xl:gap-8">
           <div className="space-y-4 flex flex-col items-center justify-center xl:col-span-1">
             <img className="h-12" src={logo} alt="Company name" />
-            <p className="text-gray-500 text-base">05 53 83 89 07</p>
-            <p className="text-gray-500 text-base">
+            <a
+              href="tel:05 53 83 89 07"
+              className="text-gray-500 hover:text-gray-900 text-base"
+            >
+              05 53 83 89 07
+            </a>
+            <a
+              href="mailto:contact@aquitaine-lifestyle-solutions.com"
+              className="text-gray-500 hover:text-gray-900 text-base"
+            >
               contact@aquitaine-lifestyle-solutions.com
-            </p>
+            </a>
             <div className="flex space-x-6">
               {footerNavigation.social.map((item) => (
                 <a
