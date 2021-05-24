@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import changeLanguage from "../redux/languageContent";
 import store from "../redux/store";
 import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
+
 import logo from "../Assets/ALS_logo.png";
 interface iconProps {
   className: string;
@@ -46,8 +50,14 @@ const mapStateToProps = (state: Record<string, any>) => {
 };
 
 function Footer(props: Record<string, any>) {
+  const [selectedLan, setSelectedLan] = useState("en");
+
   const handleChange = (event: Record<string, any>) => {
-    props.setLanguage(event.target.value);
+    setSelectedLan(event.target.value);
+  };
+  const handleConfirm = (event: Record<string, any>) => {
+    event.preventDefault();
+    props.setLanguage(selectedLan);
   };
 
   function getdefaultValue(): string | undefined {
@@ -94,6 +104,7 @@ function Footer(props: Record<string, any>) {
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
               ))}
+              <FontAwesomeIcon icon={faMedium} />
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
@@ -201,6 +212,7 @@ function Footer(props: Record<string, any>) {
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
+                  onClick={handleConfirm}
                   className="w-full bg-african-violet border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-african-violet-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
                   {changeLanguage().footer.button}

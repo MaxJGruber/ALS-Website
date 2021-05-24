@@ -10,7 +10,7 @@ export const navMain = {
     home: "Accueil",
     services: "Services",
     livingAndWorking: "Vivre & travailler en France",
-    whyPay: "Pourquoi payer pour des conseils professionels?",
+    whyPay: "Qui sommes-nous?",
     blog: "Blog",
     fees: "Tarifs",
     contact: "Contactez-nous",

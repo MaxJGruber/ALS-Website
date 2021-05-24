@@ -85,7 +85,7 @@ export const NavMain = () => {
                         </span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-900" : "text-gray-200",
+                            open ? "text-gray-900" : "text-gray-900",
                             "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
