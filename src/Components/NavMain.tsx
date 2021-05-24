@@ -80,7 +80,7 @@ export const NavMain = () => {
                         )}
                       >
                         <span>
-                          {" "}
+                
                           {changeLanguage().navMain.navLinks.services}
                         </span>
                         <ChevronDownIcon
@@ -112,7 +112,7 @@ export const NavMain = () => {
                                 <a
                                   key={item.name}
                                   href={item.href}
-                                  className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                                 >
                                   <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
                                     <item.icon
@@ -124,9 +124,9 @@ export const NavMain = () => {
                                     <p className="text-base font-medium text-gray-900">
                                       {item.name}
                                     </p>
-                                    <p className="mt-1 text-sm text-gray-500">
+                                    {/* <p className="mt-1 text-sm text-gray-500">
                                       {item.description}
-                                    </p>
+                                    </p> */}
                                   </div>
                                 </a>
                               ))}
