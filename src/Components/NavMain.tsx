@@ -3,52 +3,19 @@ import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import changeLanguage from "../redux/languageContent";
 import { Popover, Transition } from "@headlessui/react";
-import {
-  AnnotationIcon,
-  ChatAlt2Icon,
-  InboxIcon,
-  MenuIcon,
-  QuestionMarkCircleIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";
-
-const services = [
-  {
-    name: "Real Estate",
-    description:
-      "Do you dream about buying a property in France, whether it is a holiday home or a permanent move, but just don’t know where to start?",
-    href: "/services",
-    icon: InboxIcon,
-  },
-  {
-    name: "Property Management",
-    description:
-      "Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.",
-    href: "/services",
-    icon: AnnotationIcon,
-  },
-  {
-    name: "Financial Advice",
-    description:
-      "When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.",
-    href: "/services",
-    icon: ChatAlt2Icon,
-  },
-  {
-    name: "Relocation Services",
-    description:
-      "Relocating to France means dealing with the legendary French Administration. Let us deal with that!",
-    href: "/services",
-    icon: QuestionMarkCircleIcon,
-  },
-];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+const callsToAction = [
+  { name: "Watch Demo", href: "#" },
+  { name: "View All Products", href: "#" },
+  { name: "Contact Sales", href: "#" },
+];
 export const NavMain = () => {
   return (
     <header>

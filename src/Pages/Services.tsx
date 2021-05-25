@@ -7,10 +7,10 @@ export const Services = () => {
   return (
     <div>
       <NavMain />
-      <ServicesImgRight section="real-estate" />
-      <ServicesImgLeft section="property-management" />
-      <ServicesImgRight section="financial-advice" />
       <ServicesImgLeft section="relocation" />
+      <ServicesImgRight section="financial-advice" />
+      <ServicesImgLeft section="property-management" />
+      <ServicesImgRight section="real-estate" />
       <Footer />
     </div>
   );

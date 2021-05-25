@@ -97,18 +97,3 @@ export default function ServicesImgRight(props: { section: string }) {
     </div>
   );
 }
-
-{
-  /* // {props.section === "property-management" ? (
-//   <>
-//     <h3>{content.conciergeServicesTitle}</h3>
-//     <ul>
-//       {content.conciergeServicesList.map((elem: string) => (
-//         <li>{elem}</li>
-//       ))}
-//     </ul>
-//   </>
-// ) : (
-//   ""
-// )} */
-}
