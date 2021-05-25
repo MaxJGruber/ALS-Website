@@ -26,10 +26,10 @@ export const Introduction = () => {
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                   {changeLanguage().introduction.part1.title}
                 </h2>
-                <p className="mt-4 text-lg text-pastel-yellow">
+                <p className="prose mt-4 text-lg ">
                   {changeLanguage().introduction.part1.description1}
                 </p>
-                <p className="mt-4 text-lg text-pastel-yellow">
+                <p className="prose mt-4 text-lg ">
                   {changeLanguage().introduction.part1.description2}
                 </p>
                 <div className="mt-6">
@@ -54,13 +54,11 @@ export const Introduction = () => {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0">
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-        
-                <img
-                  className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                  src={housewallPic}
-                  alt="Inbox user interface"
-                />
-         
+              <img
+                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                src={housewallPic}
+                alt="Inbox user interface"
+              />
             </div>
           </div>
         </div>
@@ -84,15 +82,10 @@ export const Introduction = () => {
                 <p className="mt-4 text-lg text-gray-900">
                   {changeLanguage().introduction.part2.description1}
                 </p>
-                <ul className="mt-4 text-lg text-gray-900">
+                <ul className="prose mt-4 text-lg text-gray-900">
                   {changeLanguage().introduction.part2.list.map((elem, i) => (
                     <li key={i}>{elem}</li>
                   ))}
-                  {/* <li>Finding your property and the buying process</li>
-                  <li>Everything you need to do when you relocate</li>
-                  <li>Help setting up your business</li>
-                  <li>How to deal with taxes, insurances and finances</li>
-                  <li>Project and property management</li> */}
                 </ul>
                 <div className="mt-6">
                   <a

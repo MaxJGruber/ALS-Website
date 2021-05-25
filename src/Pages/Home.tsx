@@ -36,12 +36,12 @@ const metrics = [
 
 export default function Home() {
   return (
-    <div className="bg-logo-blue">
+    <div className="bg-white">
       <main>
         <NavMain />
         <HeroSection />
         {/* Logo Cloud */}
-        <div className="bg-logo-blue">
+        <div className="bg-red-50">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
               Here's who we work with

@@ -11,11 +11,6 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const callsToAction = [
-  { name: "Watch Demo", href: "#" },
-  { name: "View All Products", href: "#" },
-  { name: "Contact Sales", href: "#" },
-];
 export const NavMain = () => {
   return (
     <header>
@@ -35,7 +30,7 @@ export const NavMain = () => {
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
                 <NavLink
                   to="/"
-                  className="text-base font-medium text-gray-900 hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900 hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.home}
                 </NavLink>
@@ -45,7 +40,7 @@ export const NavMain = () => {
                       <Popover.Button
                         className={classNames(
                           open ? "text-gray-900" : "text-gray-900 ",
-                          "group rounded-md inline-flex items-center text-base font-medium hover:text-pastel-yellow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          "group rounded-md inline-flex items-center text-base font-medium hover:text-african-violet focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
                         <span>
@@ -111,25 +106,25 @@ export const NavMain = () => {
 
                 <NavLink
                   to="/living-working-in-france"
-                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.livingAndWorking}
                 </NavLink>
                 <NavLink
                   to="/why-pay-for-professional-advice"
-                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.whyPay}
                 </NavLink>
                 <NavLink
                   to="/blog"
-                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
                   to="/fees"
-                  className="text-base font-medium text-gray-900  hover:text-pastel-yellow"
+                  className="text-base font-medium text-gray-900  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.fees}
                 </NavLink>
@@ -176,24 +171,26 @@ export const NavMain = () => {
                     </div>
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
-                        {changeLanguage().navMain.services.map((item) => (
-                          <NavHashLink
-                            key={item.name}
-                            smooth
-                            to={item.href}
-                            className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                          >
-                            <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                              <item.icon
-                                className="h-6 w-6"
-                                aria-hidden="true"
-                              />
-                            </div>
-                            <div className="ml-4 text-base font-medium text-gray-900">
-                              {item.name}
-                            </div>
-                          </NavHashLink>
-                        ))}
+                        {changeLanguage().navMain.services.map(
+                          (item: Record<string, any>) => (
+                            <NavHashLink
+                              key={item.name}
+                              smooth
+                              to={item.href}
+                              className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                            >
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                                <item.icon
+                                  className="h-6 w-6"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <div className="ml-4 text-base font-medium text-gray-900">
+                                {item.name}
+                              </div>
+                            </NavHashLink>
+                          )
+                        )}
                       </nav>
                     </div>
                   </div>
