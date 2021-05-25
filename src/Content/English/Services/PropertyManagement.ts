@@ -4,8 +4,8 @@ export const propertyManagement = {
     `Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.`,
     `Our cleaning and maintenance teams are declared and insured and provide a high level of customer service. We can also take care of the advertising and booking of your property for long term/short term and holiday lets.`,
   ],
-  servicesTitle: `We offer the following services all year round on a regular or seasonal basis:`,
-  servicesList: [
+  listTitle: `We offer the following services all year round on a regular or seasonal basis:`,
+  list: [
     `Cleaning`,
     `Laundry`,
     `Changeovers`,

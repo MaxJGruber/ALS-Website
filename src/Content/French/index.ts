@@ -1,5 +1,6 @@
 import { ProfessionalAdvice } from "./ProfessionalAdvice";
 import { taxesAndSocialCharges } from "./Taxes&SocialCharges";
+import { services } from "./Services/index";
 import { healthCare } from "./HealthCare";
 import { features } from "./Home/Features";
 import { heroSection } from "./Home/HeroSection";
@@ -16,4 +17,5 @@ export {
   introduction,
   heroSection,
   footer,
+  services,
 };

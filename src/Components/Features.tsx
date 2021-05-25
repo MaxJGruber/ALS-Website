@@ -1,4 +1,5 @@
 import changeLanguage from "../redux/languageContent";
+import { NavHashLink } from "react-router-hash-link";
 
 export default function Products() {
   return (
@@ -29,18 +30,26 @@ export default function Products() {
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
-                      <a href={service.href} className="hover:underline">
+                      <NavHashLink
+                        smooth
+                        to={service.href}
+                        className="hover:underline"
+                      >
                         {service.title}
-                      </a>
+                      </NavHashLink>
                     </p>
-                    <a href={service.href} className="block mt-2">
+                    <NavHashLink
+                      smooth
+                      to={service.href}
+                      className="block mt-2"
+                    >
                       <p className="text-xl font-semibold text-gray-900">
                         {service.title}
                       </p>
                       <p className="mt-3 text-base text-gray-500">
                         {service.description}
                       </p>
-                    </a>
+                    </NavHashLink>
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0"></div>

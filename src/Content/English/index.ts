@@ -1,5 +1,6 @@
 import { ProfessionalAdvice } from "./ProfessionalAdvice";
 import { taxesAndSocialCharges } from "./Taxes&SocialCharges";
+import { services } from "./Services/index";
 import { healthCare } from "./HealthCare";
 import { features } from "./Home/Features";
 import { heroSection } from "./Home/HeroSection";
@@ -10,6 +11,7 @@ import { footer } from "./Footer";
 export {
   taxesAndSocialCharges,
   ProfessionalAdvice,
+  services,
   healthCare,
   features,
   navMain,

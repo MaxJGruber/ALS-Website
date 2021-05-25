@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import changeLanguage from "../redux/languageContent";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -18,27 +19,28 @@ const services = [
     name: "Real Estate",
     description:
       "Do you dream about buying a property in France, whether it is a holiday home or a permanent move, but just don’t know where to start?",
-    href: "#",
+    href: "/services",
     icon: InboxIcon,
   },
   {
     name: "Property Management",
     description:
       "Many people rent out property, but not everyone is aware of the rules and regulations. We will advise you on how to register with the local town hall, how rental should be declared and what tax should be paid.",
+    href: "/services",
     icon: AnnotationIcon,
   },
   {
     name: "Financial Advice",
     description:
       "When moving or investing in France you will need to understand the implications from a financial and fiscal standpoint.",
-    href: "#",
+    href: "/services",
     icon: ChatAlt2Icon,
   },
   {
     name: "Relocation Services",
     description:
       "Relocating to France means dealing with the legendary French Administration. Let us deal with that!",
-    href: "#",
+    href: "/services",
     icon: QuestionMarkCircleIcon,
   },
 ];
@@ -80,7 +82,6 @@ export const NavMain = () => {
                         )}
                       >
                         <span>
-                
                           {changeLanguage().navMain.navLinks.services}
                         </span>
                         <ChevronDownIcon
@@ -108,28 +109,31 @@ export const NavMain = () => {
                         >
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                              {services.map((item) => (
-                                <a
-                                  key={item.name}
-                                  href={item.href}
-                                  className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                                >
-                                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
-                                    <item.icon
-                                      className="h-6 w-6"
-                                      aria-hidden="true"
-                                    />
-                                  </div>
-                                  <div className="ml-4">
-                                    <p className="text-base font-medium text-gray-900">
-                                      {item.name}
-                                    </p>
-                                    {/* <p className="mt-1 text-sm text-gray-500">
+                              {changeLanguage().navMain.services.map(
+                                (item: Record<string, any>) => (
+                                  <NavHashLink
+                                    key={item.name}
+                                    smooth
+                                    to={item.href}
+                                    className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                                  >
+                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                      <item.icon
+                                        className="h-6 w-6"
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      {/* <p className="mt-1 text-sm text-gray-500">
                                       {item.description}
                                     </p> */}
-                                  </div>
-                                </a>
-                              ))}
+                                    </div>
+                                  </NavHashLink>
+                                )
+                              )}
                             </div>
                           </div>
                         </Popover.Panel>
@@ -205,10 +209,11 @@ export const NavMain = () => {
                     </div>
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
-                        {services.map((item) => (
-                          <a
+                        {changeLanguage().navMain.services.map((item) => (
+                          <NavHashLink
                             key={item.name}
-                            href={item.href}
+                            smooth
+                            to={item.href}
                             className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                           >
                             <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
@@ -220,7 +225,7 @@ export const NavMain = () => {
                             <div className="ml-4 text-base font-medium text-gray-900">
                               {item.name}
                             </div>
-                          </a>
+                          </NavHashLink>
                         ))}
                       </nav>
                     </div>

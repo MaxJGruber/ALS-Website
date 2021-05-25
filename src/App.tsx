@@ -6,6 +6,7 @@ import { FranceAndAdvice } from "./Pages/WhyUs";
 import { Fees } from "./Pages/Fees";
 import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";
+import { Services } from "./Pages/Services";
 import store from "./redux/store";
 import { connect } from "react-redux";
 import { LivingAndWorking } from "./Pages/Living&Working";
@@ -31,22 +32,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/servies/real-estate" component={FranceAndAdvice} />
-        <Route
-          exact
-          path="/servies/property-management"
-          component={FranceAndAdvice}
-        />
-        <Route
-          exact
-          path="/servies/financial-advice"
-          component={FranceAndAdvice}
-        />
-        <Route
-          exact
-          path="/servies/relocation-services"
-          component={FranceAndAdvice}
-        />
+        <Route exact path="/services" component={Services} />
         <Route
           exact
           path="/why-pay-for-professional-advice"
