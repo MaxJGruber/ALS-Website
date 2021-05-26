@@ -1,5 +1,6 @@
-import gatePic from "../Assets/french-farm-house.jpeg";
-import housewallPic from "../Assets/buy-french-property.jpeg";
+// import gatePic from "../Assets/french-farm-house.jpeg";
+// import housewallPic from "../Assets/buy-french-property.jpeg";
+import { NavLink } from "react-router-dom";
 import changeLanguage from "../redux/languageContent";
 import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
 import currentLocation from "../Assets/undraw_My_current_location_re_whmt.png";
@@ -35,12 +36,12 @@ export const Introduction = () => {
                   {changeLanguage().introduction.part1.description2}
                 </p>
                 <div className="mt-6">
-                  <a
-                    href="#"
-                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                  <NavLink
+                    to="/fees"
+                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    Get started
-                  </a>
+                    Find out more on pricing
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -90,12 +91,12 @@ export const Introduction = () => {
                   ))}
                 </ul>
                 <div className="mt-6">
-                  <a
-                    href="#"
-                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
+                  <NavLink
+                    to="/contact-us"
+                    className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    Get started
-                  </a>
+                    Contact Us
+                  </NavLink>
                 </div>
               </div>
             </div>

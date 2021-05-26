@@ -29,7 +29,10 @@ export default function TeamSection() {
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
               About Us
             </h2>
-            <img src={teamwork} />
+            <img
+              src={teamwork}
+              alt="two women working on computers in an office"
+            />
             <p className="text-xl text-gray-500">
               At Aquitaine Lifestyle Solutions, our team of experts can provide
               you with all the services you need under one roof to help open the

@@ -23,19 +23,6 @@ const plans = [
     priceMonthly: 565,
     priceYearly: 1695,
     mainFeatures: [
-      { id: 1, value: "Basic invoicing" },
-      { id: 2, value: "Easy to use accounting" },
-      { id: 3, value: "Mutli-accounts" },
-      { id: 4, value: "Tax planning toolkit" },
-    ],
-  },
-  {
-    title: "Premium",
-    featured: false,
-    description: "Convenient features to take your business to the next level.",
-    priceMonthly: 832,
-    priceYearly: 2495,
-    mainFeatures: [
       { id: 1, value: "Integration into the French health system" },
       {
         id: 2,
@@ -49,6 +36,19 @@ const plans = [
         value:
           "Creation of a gite or bed & breakfast activity or self-employed status",
       },
+    ],
+  },
+  {
+    title: "Premium",
+    featured: false,
+    description: "Convenient features to take your business to the next level.",
+    priceMonthly: 832,
+    priceYearly: 2495,
+    mainFeatures: [
+      { id: 1, value: "Basic invoicing" },
+      { id: 2, value: "Easy to use accounting" },
+      { id: 3, value: "Mutli-accounts" },
+      { id: 4, value: "Tax planning toolkit" },
     ],
   },
 ];
@@ -175,32 +175,32 @@ function classNames(...classes: string[]) {
 
 export default function PricingSection() {
   return (
-    <div className="bg-gray-50">
+    <div className="">
       <main>
         {/* Pricing section */}
         <div>
-          <div className="relative bg-indigo-600">
+          <div className="relative">
             {/* Overlapping background */}
             <div
               aria-hidden="true"
-              className="hidden absolute bg-gray-50 w-full h-6 bottom-0 lg:block"
+              className="hidden absolute w-full h-6 bottom-0 lg:block"
             />
 
             <div className="relative max-w-2xl mx-auto pt-10 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
-              <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+              <h1 className="text-4xl mb-10 font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                 <span className="block lg:inline">Simple pricing,</span>
-                <span className="block lg:inline">&nbsp;no commitment.</span>
+                <span className="block lg:inline">&nbsp;simple life.</span>
               </h1>
-              <p className="mt-4 text-xl text-indigo-100">
+              <p className="mt-4 text-xl text-gray-500">
                 We offer packages and à la carte services. Our services are
                 tailor-made to our customers’ needs.
               </p>
-              <p className="mt-4 text-xl text-indigo-100">
+              <p className="mt-4 text-xl text-gray-500">
                 As each case is different a detailed quote will be given once we
                 have had the opportunity to understand how we can help you,
                 however please find below an example of some of our packages.
               </p>
-              <p className="mt-4 text-xl text-indigo-100">
+              <p className="mt-4 text-xl text-gray-500">
                 Payments can be made in 1 or 3 installments or by monthly direct
                 debit.
               </p>
@@ -210,7 +210,7 @@ export default function PricingSection() {
               {/* Decorative background */}
               <div
                 aria-hidden="true"
-                className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg lg:block"
+                className="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-indigo-700 rounded-tl-lg rounded-tr-lg rounded-bl-lg  rounded-br-lg lg:block"
               />
 
               <div className="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-3">

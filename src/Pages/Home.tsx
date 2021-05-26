@@ -140,7 +140,7 @@ export default function Home() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-white">
+        <div className="">
           <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               <span className="block">Ready to start a new life?</span>
@@ -151,16 +151,16 @@ export default function Home() {
             <div className="mt-6 space-y-4 sm:space-y-0 sm:flex sm:space-x-5">
               <NavLink
                 to="/contact-us"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-african-violet hover:from-purple-700 hover:to-indigo-700"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-african-violet hover:from-purple-700 hover:to-indigo-700"
               >
                 Contact us
               </NavLink>
-              <a
-                href="#"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-african-violet"
+              <NavLink
+                to="/living-working-in-france"
+                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-800 bg-indigo-50 hover:bg-tertiary-pink hover:text-yellow-200"
               >
-                Learn more
-              </a>
+                Learn more about life in France
+              </NavLink>
             </div>
           </div>
         </div>

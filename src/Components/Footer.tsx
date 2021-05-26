@@ -212,7 +212,7 @@ function Footer(props: Record<string, any>) {
                 <button
                   type="submit"
                   onClick={handleConfirm}
-                  className="w-full bg-african-violet border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-african-violet-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+                  className="w-full bg-african-violet border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-yellow-200 hover:bg-african-violet-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
                 >
                   {changeLanguage().footer.button}
                 </button>

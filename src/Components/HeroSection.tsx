@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import changeLanguage from "../redux/languageContent";
-import introPic from "../Assets/living-in-france.jpeg";
-import relocation from "../Assets/undraw_Navigation_re_wxx4.png";
-import houseSearching from "../Assets/undraw_House_searching_re_stk8.png";
-import savings from "../Assets/undraw_Savings_re_eq4w.png";
-import propertyManagement from "../Assets/undraw_build_your__home_csh6.png";
+// import introPic from "../Assets/living-in-france.jpeg";
+// import relocation from "../Assets/undraw_Navigation_re_wxx4.png";
+// import houseSearching from "../Assets/undraw_House_searching_re_stk8.png";
+// import savings from "../Assets/undraw_Savings_re_eq4w.png";
+// import propertyManagement from "../Assets/undraw_build_your__home_csh6.png";
 
 export const HeroSection = () => {
   return (
@@ -23,7 +23,7 @@ export const HeroSection = () => {
               <div className="absolute inset-0 bg-purple-500 mix-blend-multiply" />
             </div>
             <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-              <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="text-center pb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 <span className="block text-white">
                   {changeLanguage().heroSection.taglinePart1}
                 </span>
@@ -34,22 +34,23 @@ export const HeroSection = () => {
               <p className="mt-6 max-w-lg mx-auto text-center text-xl text-gray-50 sm:max-w-3xl">
                 {changeLanguage().heroSection.hook1}
                 <br />
+                <br />
                 {changeLanguage().heroSection.hook2}
               </p>
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                  <a
-                    href="#"
+                  <NavLink
+                    to="/services"
                     className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
                   >
-                    Get started
-                  </a>
-                  <a
-                    href="#"
-                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
+                    {changeLanguage().heroSection.button}
+                  </NavLink>
+                  <NavLink
+                    to="/why-pay-for-professional-advice"
+                    className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                   >
-                    Live demo
-                  </a>
+                    Learn more about who we are
+                  </NavLink>
                 </div>
               </div>
             </div>
