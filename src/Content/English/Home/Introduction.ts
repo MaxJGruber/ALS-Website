@@ -3,7 +3,7 @@ export const introduction = {
     title: "Let us handle your affairs so that you don't have to!",
     description1: `Aquitaine Lifestyle Solutions provides professional solutions in all aspects concerning Financial Advice, Real Estate, Relocation Services and Property Management.`,
     description2: `Whether you need assistance with everything or just certain parts, make life easy for yourself and contact us for more information about packages or à la carte services.`,
-    button: "Get started",
+    button: "Check out our packages",
     warningText: `Real Estate and Property Management Services cover the Aquitaine region. Financial and Relocation Services cover all regions.`,
   },
   part2: {
@@ -16,6 +16,6 @@ export const introduction = {
       "How to deal with taxes, insurances and finances",
       "Project and property management",
     ],
-    button: "Get started",
+    button: "Contact Us",
   },
 };

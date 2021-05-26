@@ -4,4 +4,5 @@ export const heroSection = {
   hook1: "Want To Relocate Or Invest In Property In South West France?",
   hook2: "Have you already moved or invested and need advice and help?",
   button: "Check out what we have to offer",
+  button2: "Learn more about who we are",
 };

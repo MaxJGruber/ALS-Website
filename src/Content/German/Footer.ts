@@ -1,30 +1,27 @@
+import { services } from "./Home/Services";
+
 export const footer = {
   title1: "Services",
-  solutions: [
-    { name: "Real Estate", href: "#" },
-    { name: "Property Management", href: "#" },
-    { name: "Financial Advice", href: "#" },
-    { name: "Relocation Services", href: "#" },
-  ],
-  title2: "Support",
+  solutions: services,
+  title2: "Unterstützung",
   support: [
-    { name: "Fees", href: "/fees" },
-    { name: "Contact us", href: "/contact-us" },
+    { name: "Gebühren", href: "/fees" },
+    { name: "Kontakt", href: "/contact-us" },
     // { name: "Guides", href: "#" },
   ],
-  title3: "Company",
+  title3: "Unternehmen",
   company: [
-    { name: "About us", href: "/team" },
+    { name: "Über uns", href: "/team" },
     { name: "Blog", href: "/blog" },
     // { name: "Partners", href: "#" },
   ],
-  title4: "Legal",
+  title4: "Impressum",
   legal: [
     { name: "Policy", href: "#" },
     { name: "Privacy", href: "#" },
     { name: "Terms & Conditions", href: "#" },
   ],
-  switch: "Switch language",
-  button: "Confirm",
-  rights: "All rights reserved.",
+  switch: "Sprache wechseln",
+  button: "Bestätigen",
+  rights: "Alle Rechte vorbehalten.",
 };

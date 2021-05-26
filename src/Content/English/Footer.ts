@@ -1,11 +1,8 @@
+import { services } from "./Home/Services";
+
 export const footer = {
   title1: "Services",
-  solutions: [
-    { name: "Real Estate", href: "#" },
-    { name: "Property Management", href: "#" },
-    { name: "Financial Advice", href: "#" },
-    { name: "Relocation Services", href: "#" },
-  ],
+  solutions: services,
   title2: "Support",
   support: [
     { name: "Fees", href: "/fees" },

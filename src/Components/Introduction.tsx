@@ -40,7 +40,7 @@ export const Introduction = () => {
                     to="/fees"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    Find out more on pricing
+                    {changeLanguage().introduction.part1.button}
                   </NavLink>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export const Introduction = () => {
                     to="/contact-us"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    Contact Us
+                    {changeLanguage().introduction.part2.button}
                   </NavLink>
                 </div>
               </div>

@@ -1,7 +1,8 @@
 export const heroSection = {
-  taglinePart1: "The key to your new life in France",
+  taglinePart1: "Der Schlüssel zu Ihrem neuen Leben in Frankreich",
   taglinePart2: "Aquitaine Lifestyle Solutions",
-  hook1: "Want To Relocate Or Invest In Property In South West France?",
-  hook2: "Have you already moved or invested and need advice and help?",
-  button: "Check out what we have to offer",
+  hook1: "Möchten Sie umziehen oder in Immobilien in Südwestfrankreich investieren?",
+  hook2: "Sind Sie bereits umgezogen oder investiert und benötigen Beratung und Hilfe?",
+  button: "Schauen Sie sich an, was wir zu bieten haben",
+  button2: "Erfahren Sie mehr über wer wir sind",
 };

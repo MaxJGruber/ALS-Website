@@ -101,7 +101,7 @@ function Footer(props: Record<string, any>) {
               >
                 <FontAwesomeIcon
                   icon={faMedium}
-                  className="text-2xl text-gray-400"
+                  className="text-2xl text-gray-400 hover:text-gray-500"
                 />
               </a>
             </div>
