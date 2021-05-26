@@ -1,7 +1,8 @@
 import changeLanguage from "../redux/languageContent";
+import healthCarePic from "../Assets/undraw_medical_care_movn.png";
+import healthCarePic2 from "../Assets/undraw_doctors_hwty.png";
 
 export default function HealthCare() {
-  console.log(changeLanguage());
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
@@ -146,6 +147,10 @@ export default function HealthCare() {
                   </li>
                 </ul>
               </div>
+            </div>
+            <div className="grid grid-cols-2">
+              <img src={healthCarePic} alt="" />
+              <img src={healthCarePic2} alt="" />
             </div>
             <div className="mt-8">
               <p className=" text-xl text-center leading-6 font-extrabold tracking-tight text-gray-900 sm:text-xl">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import changeLanguage from "../redux/languageContent";
 import TaxSection from "./TaxSection";
+import calculatorPic from "../Assets/undraw_Calculator_0evy.png";
 
 export default function SocialCharges() {
   const [selectedTax, setSelectedTax] = useState("personal tax");
@@ -92,12 +93,21 @@ export default function SocialCharges() {
                   <p>{elem}</p>
                 )
               )}
-              {changeLanguage().taxesAndSocialCharges.warning.map((elem) => (
-                <p className="font-bold text-center">{elem}</p>
-              ))}
-              <p className="text-center">
-                {changeLanguage().taxesAndSocialCharges.taxes}
-              </p>
+              <div className="grid grid-cols-2">
+                <div className="flex flex-col justify-center">
+                  {changeLanguage().taxesAndSocialCharges.warning.map(
+                    (elem) => (
+                      <p className="font-bold text-center">{elem}</p>
+                    )
+                  )}
+                  <p className="text-center">
+                    {changeLanguage().taxesAndSocialCharges.taxes}
+                  </p>
+                </div>
+                <div className="flex justify-center">
+                  <img src={calculatorPic} className="taxes-pic" alt="" />
+                </div>
+              </div>
               <span className="relative z-0 flex flex-col sm:flex-row inline-flex shadow-sm rounded-md">
                 <button
                   type="button"

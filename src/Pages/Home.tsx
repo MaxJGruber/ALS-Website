@@ -40,8 +40,13 @@ export default function Home() {
       <main>
         <NavMain />
         <HeroSection />
+        {/* Gradient Feature Section */}
+        <Features />
+        {/* Alternating Feature Sections */}
+        <Introduction />
+
         {/* Logo Cloud */}
-        <div className="bg-red-50">
+        <div className="">
           <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
               Here's who we work with
@@ -81,12 +86,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Alternating Feature Sections */}
-        <Introduction />
-
-        {/* Gradient Feature Section */}
-        <Features />
-
         {/* Stats section */}
         <div className="relative bg-gray-900">
           <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">

@@ -1,4 +1,4 @@
-import realEstatePic from "../../../Assets/buying-real-estate.jpeg";
+import realEstatePic from "../../../Assets/undraw_buy_house_560d.png";
 
 export const realEstate = {
   title: `House Hunting & Real Estate`,

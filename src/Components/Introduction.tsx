@@ -2,6 +2,8 @@ import gatePic from "../Assets/french-farm-house.jpeg";
 import housewallPic from "../Assets/buy-french-property.jpeg";
 import changeLanguage from "../redux/languageContent";
 import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
+import currentLocation from "../Assets/undraw_My_current_location_re_whmt.png";
+import countrySide from "../Assets/undraw_Country_side_k696.png";
 
 export const Introduction = () => {
   return (
@@ -56,7 +58,7 @@ export const Introduction = () => {
             <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={housewallPic}
+                src={countrySide}
                 alt="Inbox user interface"
               />
             </div>
@@ -102,7 +104,7 @@ export const Introduction = () => {
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                src={gatePic}
+                src={currentLocation}
                 alt="Customer profile user interface"
               />
             </div>

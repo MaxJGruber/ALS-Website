@@ -4,10 +4,10 @@ import {
   LibraryIcon,
   ScaleIcon,
 } from "@heroicons/react/outline";
-import photo1 from "../../../Assets/real-estate.jpeg";
-import photo2 from "../../../Assets/ALS2.jpeg";
-import photo3 from "../../../Assets/ALS1.jpeg";
-import photo4 from "../../../Assets/property-management-services.jpeg";
+import photo1 from "../../../Assets/undraw_Navigation_re_wxx4.png";
+import photo2 from "../../../Assets/undraw_Savings_re_eq4w.png";
+import photo3 from "../../../Assets/undraw_build_your__home_csh6.png";
+import photo4 from "../../../Assets/undraw_House_searching_re_stk8.png";
 
 export const services = [
   {

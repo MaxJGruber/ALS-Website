@@ -1,4 +1,4 @@
-import financePic from "../../../Assets/ALS2.jpeg";
+import financePic from "../../../Assets/undraw_Data_re_80ws.png";
 
 export const financialAdvice = {
   title: `Financial Advice`,

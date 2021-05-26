@@ -30,7 +30,7 @@ export const NavMain = () => {
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
                 <NavLink
                   to="/"
-                  className="text-base font-medium text-gray-900 hover:text-african-violet"
+                  className="text-base font-medium text-african-violet hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.home}
                 </NavLink>
@@ -39,7 +39,7 @@ export const NavMain = () => {
                     <>
                       <Popover.Button
                         className={classNames(
-                          open ? "text-gray-900" : "text-gray-900 ",
+                          open ? "text-african-violet" : "text-african-violet ",
                           "group rounded-md inline-flex items-center text-base font-medium hover:text-african-violet focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         )}
                       >
@@ -48,7 +48,7 @@ export const NavMain = () => {
                         </span>
                         <ChevronDownIcon
                           className={classNames(
-                            open ? "text-gray-900" : "text-gray-900",
+                            open ? "text-african-violet" : "text-african-violet",
                             "ml-2 h-5 w-5 group-hover:text-gray-500"
                           )}
                           aria-hidden="true"
@@ -106,25 +106,25 @@ export const NavMain = () => {
 
                 <NavLink
                   to="/living-working-in-france"
-                  className="text-base font-medium text-gray-900  hover:text-african-violet"
+                  className="text-base font-medium text-african-violet  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.livingAndWorking}
                 </NavLink>
                 <NavLink
                   to="/why-pay-for-professional-advice"
-                  className="text-base font-medium text-gray-900  hover:text-african-violet"
+                  className="text-base font-medium text-african-violet  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.whyPay}
                 </NavLink>
                 <NavLink
                   to="/blog"
-                  className="text-base font-medium text-gray-900  hover:text-african-violet"
+                  className="text-base font-medium text-african-violet  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
                   to="/fees"
-                  className="text-base font-medium text-gray-900  hover:text-african-violet"
+                  className="text-base font-medium text-african-violet  hover:text-african-violet"
                 >
                   {changeLanguage().navMain.navLinks.fees}
                 </NavLink>
@@ -133,7 +133,7 @@ export const NavMain = () => {
                 <span className="inline-flex rounded-md shadow">
                   <NavLink
                     to="/contact-us"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-african-violet bg-white hover:bg-gray-50"
                   >
                     {changeLanguage().navMain.navLinks.contact}
                   </NavLink>

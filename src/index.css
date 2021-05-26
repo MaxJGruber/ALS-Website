@@ -31,6 +31,11 @@ code {
   height: 18em;
 }
 
+.taxes-pic {
+  height: 18em;
+  margin: 0;
+}
+
 .slide-in-right {
   -webkit-animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

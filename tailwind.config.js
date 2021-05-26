@@ -5,9 +5,10 @@ module.exports = {
     extend: {
       colors: {
         "logo-blue": "#e7f3ff",
-        "african-violet": "#7A5EC6",
+        "african-violet": "#6C63FF",
         "yogurt-orange": "#FAAC6A",
         "blue-green": "#8DD4CD",
+        "tertiary-pink": "#e45858",
       },
     },
   },
