@@ -1,5 +1,6 @@
 import madelineAboutPic from "../Assets/madeline-about-pic.jpeg";
 import yvonnePic from "../Assets/yvonne-pic.jpeg";
+import teamwork from "../Assets/undraw_Work_time_re_hdyv.png";
 
 const people = [
   {
@@ -28,6 +29,7 @@ export default function TeamSection() {
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
               About Us
             </h2>
+            <img src={teamwork} />
             <p className="text-xl text-gray-500">
               At Aquitaine Lifestyle Solutions, our team of experts can provide
               you with all the services you need under one roof to help open the
