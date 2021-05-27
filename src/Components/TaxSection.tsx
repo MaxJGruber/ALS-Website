@@ -5,7 +5,7 @@ export default function TaxSection(props: Record<string, any>) {
   const [selectedTax, setSelectedTax] = useState<Record<string, any>>({});
 
   useEffect(() => {
-    const content = changeLanguage().taxesAndSocialCharges;
+    const content = changeLanguage().livingAndWorking.taxesAndSocialCharges;
     switch (props.tax) {
       case "personal tax":
         setSelectedTax(content.personalIncomeTax);

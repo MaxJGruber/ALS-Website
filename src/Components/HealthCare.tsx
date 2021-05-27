@@ -9,7 +9,7 @@ export default function HealthCare() {
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <div className="text-base max-w-prose lg:max-w-none">
             <h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
-              {changeLanguage().healthCare.title}
+              {changeLanguage().livingAndWorking.healthCare.title}
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               A better way to send money
@@ -86,28 +86,38 @@ export default function HealthCare() {
           <div className="relative md:bg-white md:p-6">
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
               <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
-                {changeLanguage().healthCare.intro.map((elem: string) => (
-                  <p>{elem}</p>
-                ))}
+                {changeLanguage().livingAndWorking.healthCare.intro.map(
+                  (elem: string) => (
+                    <p>{elem}</p>
+                  )
+                )}
                 <p>
                   <strong>
-                    {changeLanguage().healthCare.introConclusionStart}
+                    {
+                      changeLanguage().livingAndWorking.healthCare
+                        .introConclusionStart
+                    }
                   </strong>
                   &nbsp;
-                  {changeLanguage().healthCare.introConclusionEnd}
+                  {
+                    changeLanguage().livingAndWorking.healthCare
+                      .introConclusionEnd
+                  }
                 </p>
-                <p>{changeLanguage().healthCare.dualSystemTitle}</p>
+                <p>
+                  {changeLanguage().livingAndWorking.healthCare.dualSystemTitle}
+                </p>
                 <ul>
-                  {changeLanguage().healthCare.dualSystems.map(
+                  {changeLanguage().livingAndWorking.healthCare.dualSystems.map(
                     (elem: string) => (
                       <li>{elem}</li>
                     )
                   )}
                 </ul>
-                <p>{changeLanguage().healthCare.warnings}</p>
-                <p>{changeLanguage().healthCare.PUMALaw}</p>
+                <p>{changeLanguage().livingAndWorking.healthCare.warnings}</p>
+                <p>{changeLanguage().livingAndWorking.healthCare.PUMALaw}</p>
                 <ul>
-                  {changeLanguage().healthCare.conditions.map(
+                  {changeLanguage().livingAndWorking.healthCare.conditions.map(
                     (elem: string) => (
                       <li>{elem}</li>
                     )
@@ -115,35 +125,50 @@ export default function HealthCare() {
                 </ul>
               </div>
               <div className="mt-6 text-left prose prose-indigo prose-lg text-gray-500 lg:mt-0">
-                <p>{changeLanguage().healthCare.differentDoorsTitle}</p>
+                <p>
+                  {
+                    changeLanguage().livingAndWorking.healthCare
+                      .differentDoorsTitle
+                  }
+                </p>
                 <ul>
                   <li>
-                    <strong>{changeLanguage().healthCare.door1Intro}</strong>
+                    <strong>
+                      {changeLanguage().livingAndWorking.healthCare.door1Intro}
+                    </strong>
                     &nbsp;
-                    {changeLanguage().healthCare.door1Suite}
+                    {changeLanguage().livingAndWorking.healthCare.door1Suite}
                   </li>
                   <li>
-                    <strong>{changeLanguage().healthCare.door2Intro}</strong>
+                    <strong>
+                      {changeLanguage().livingAndWorking.healthCare.door2Intro}
+                    </strong>
                     &nbsp;
-                    {changeLanguage().healthCare.door2Suite}
+                    {changeLanguage().livingAndWorking.healthCare.door2Suite}
                     <br />
-                    {changeLanguage().healthCare.door2NB.map((elem: string) => (
-                      <>
-                        <br />
-                        <i>{elem}</i>
-                        <br />
-                      </>
-                    ))}
+                    {changeLanguage().livingAndWorking.healthCare.door2NB.map(
+                      (elem: string) => (
+                        <>
+                          <br />
+                          <i>{elem}</i>
+                          <br />
+                        </>
+                      )
+                    )}
                   </li>
                   <li>
-                    <strong>{changeLanguage().healthCare.door3Intro}</strong>
+                    <strong>
+                      {changeLanguage().livingAndWorking.healthCare.door3Intro}
+                    </strong>
                     &nbsp;
-                    {changeLanguage().healthCare.door3Suite}
+                    {changeLanguage().livingAndWorking.healthCare.door3Suite}
                   </li>
                   <li>
-                    <strong>{changeLanguage().healthCare.door4Intro}</strong>
+                    <strong>
+                      {changeLanguage().livingAndWorking.healthCare.door4Intro}
+                    </strong>
                     &nbsp;
-                    {changeLanguage().healthCare.door4Suite}
+                    {changeLanguage().livingAndWorking.healthCare.door4Suite}
                   </li>
                 </ul>
               </div>
@@ -158,7 +183,7 @@ export default function HealthCare() {
               </p>
               <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
                 <p>
-                  {changeLanguage().healthCare.faq.map(
+                  {changeLanguage().livingAndWorking.healthCare.faq.map(
                     (elem: { question: string; answer: string[] }) => (
                       <>
                         <p className="font-bold">{elem.question}</p>

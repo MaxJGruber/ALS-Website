@@ -10,11 +10,11 @@ export default function Features() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            {changeLanguage().features.title}
+            {changeLanguage().homePage.features.title}
           </h2>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 lg:max-w-none">
-          {changeLanguage().features.services.map(
+          {changeLanguage().homePage.features.services.map(
             (service: Record<string, any>) => (
               <div
                 key={service.name}
@@ -30,7 +30,7 @@ export default function Features() {
                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                   <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
-                      <p className="text-xl font-semibold text-tertiary-pink">
+                      <p className="text-xl font-semibold text-gray-900">
                         {service.name}
                       </p>
                       {/* <NavHashLink

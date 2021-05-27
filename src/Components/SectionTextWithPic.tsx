@@ -19,22 +19,22 @@ export default function SectionTextWithPic() {
               Let us do the work
             </h2>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              {changeLanguage().ProfessionalAdvice.title}
+              {changeLanguage().aboutUs.ProfessionalAdvice.title}
             </h3>
             <div className="mt-5 text-left prose prose-indigo text-gray-500">
-              <p>{changeLanguage().ProfessionalAdvice.para1}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para2}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para3}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para4}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para5}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para6}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para7}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para8}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para9}</p>
-              <p>{changeLanguage().ProfessionalAdvice.para10}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para1}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para2}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para3}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para4}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para5}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para6}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para7}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para8}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para9}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.para10}</p>
               <div id="hello"></div>
-              <p>{changeLanguage().ProfessionalAdvice.conclusion1}</p>
-              <p>{changeLanguage().ProfessionalAdvice.conclusion2}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.conclusion1}</p>
+              <p>{changeLanguage().aboutUs.ProfessionalAdvice.conclusion2}</p>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function SocialCharges() {
         <div className="relative z-10 mb-8 md:mb-2 md:px-6">
           <div className="text-base max-w-prose lg:max-w-none">
             <h2 className="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
-              {changeLanguage().taxesAndSocialCharges.title}
+              {changeLanguage().livingAndWorking.taxesAndSocialCharges.title}
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
               A better way to send money
@@ -88,20 +88,23 @@ export default function SocialCharges() {
           </svg>
           <div className="relative md:bg-white md:p-6">
             <div className="prose text-left prose-indigo prose-lg text-gray-500 lg:max-w-none">
-              {changeLanguage().taxesAndSocialCharges.introduction.map(
+              {changeLanguage().livingAndWorking.taxesAndSocialCharges.introduction.map(
                 (elem) => (
                   <p>{elem}</p>
                 )
               )}
               <div className="grid grid-cols-2">
                 <div className="flex flex-col justify-center">
-                  {changeLanguage().taxesAndSocialCharges.warning.map(
+                  {changeLanguage().livingAndWorking.taxesAndSocialCharges.warning.map(
                     (elem) => (
                       <p className="font-bold text-center">{elem}</p>
                     )
                   )}
                   <p className="text-center">
-                    {changeLanguage().taxesAndSocialCharges.taxes}
+                    {
+                      changeLanguage().livingAndWorking.taxesAndSocialCharges
+                        .taxes
+                    }
                   </p>
                 </div>
                 <div className="flex justify-center">

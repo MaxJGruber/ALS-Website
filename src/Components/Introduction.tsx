@@ -27,20 +27,20 @@ export const Introduction = () => {
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  {changeLanguage().introduction.part1.title}
+                  {changeLanguage().homePage.introduction.part1.title}
                 </h2>
                 <p className="prose mt-4 text-lg ">
-                  {changeLanguage().introduction.part1.description1}
+                  {changeLanguage().homePage.introduction.part1.description1}
                 </p>
                 <p className="prose mt-4 text-lg ">
-                  {changeLanguage().introduction.part1.description2}
+                  {changeLanguage().homePage.introduction.part1.description2}
                 </p>
                 <div className="mt-6">
                   <NavLink
                     to="/fees"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    {changeLanguage().introduction.part1.button}
+                    {changeLanguage().homePage.introduction.part1.button}
                   </NavLink>
                 </div>
               </div>
@@ -49,7 +49,7 @@ export const Introduction = () => {
               <blockquote>
                 <div>
                   <p className="text-base text-gray-900">
-                    {changeLanguage().introduction.part1.warningText}
+                    {changeLanguage().homePage.introduction.part1.warningText}
                   </p>
                 </div>
               </blockquote>
@@ -80,22 +80,24 @@ export const Introduction = () => {
               </div>
               <div className="mt-6">
                 <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                  {changeLanguage().introduction.part2.title}
+                  {changeLanguage().homePage.introduction.part2.title}
                 </h2>
                 <p className="mt-4 text-lg text-gray-900">
-                  {changeLanguage().introduction.part2.description1}
+                  {changeLanguage().homePage.introduction.part2.description1}
                 </p>
                 <ul className="prose mt-4 text-lg text-gray-900">
-                  {changeLanguage().introduction.part2.list.map((elem, i) => (
-                    <li key={i}>{elem}</li>
-                  ))}
+                  {changeLanguage().homePage.introduction.part2.list.map(
+                    (elem, i) => (
+                      <li key={i}>{elem}</li>
+                    )
+                  )}
                 </ul>
                 <div className="mt-6">
                   <NavLink
                     to="/contact-us"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
-                    {changeLanguage().introduction.part2.button}
+                    {changeLanguage().homePage.introduction.part2.button}
                   </NavLink>
                 </div>
               </div>

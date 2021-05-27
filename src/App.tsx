@@ -45,7 +45,7 @@ function App() {
         />
         <Route exact path="/fees" component={Fees} />
         <Route exact path="/blog" component={Blog} />
-        <Route exact path="/team" component={Team} />
+        <Route exact path="/about-us" component={Team} />
         <Route exact path="/contact-us" component={ContactUs} />
       </Switch>
     </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { submitForm } from "../ApiHandlers/wufooApi";
 import { countryList } from "../Content/countryList";
+import changeLanguage from "../redux/languageContent";
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setStatus: (status: boolean) => dispatch({ type: "SET_STATUS", status }),
@@ -55,19 +56,18 @@ function Form(props: Record<string, any>) {
         <div className="lg:pr-8">
           <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Let's work together
+              {changeLanguage().contactForm.title}
             </h2>
             <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-              We’d love to hear from you!
+              {changeLanguage().contactForm.subTitle}
             </p>
             <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-              If you are interested in any of our services, please don’t
-              hesitate to get in touch and a member of our team will be happy to
-              assist you.
+              {changeLanguage().contactForm.intro}
             </p>
             <p className="mt-4 text-md text-gray-500 sm:mt-3">
-              You can send us a message using the short form below. Mandatory
-              fields are marked with a <span className="text-red-400">*</span>.
+              {changeLanguage().contactForm.how}
+              <br /> {changeLanguage().contactForm.mandatoryFields}{" "}
+              <span className="text-red-400">*</span>.
             </p>
             <form
               action="#"
@@ -79,7 +79,8 @@ function Form(props: Record<string, any>) {
                   htmlFor="first_name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First name<span className="text-red-400">*</span>
+                  {changeLanguage().contactForm.formLabels.firstName}
+                  <span className="text-red-400">*</span>
                 </label>
                 <div className="mt-1">
                   <input
@@ -96,7 +97,8 @@ function Form(props: Record<string, any>) {
                   htmlFor="last_name"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last name<span className="text-red-400">*</span>
+                  {changeLanguage().contactForm.formLabels.lastName}
+                  <span className="text-red-400">*</span>
                 </label>
                 <div className="mt-1">
                   <input
@@ -113,7 +115,8 @@ function Form(props: Record<string, any>) {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Email<span className="text-red-400">*</span>
+                  {changeLanguage().contactForm.formLabels.email}
+                  <span className="text-red-400">*</span>
                 </label>
                 <div className="mt-1">
                   <input
@@ -131,7 +134,7 @@ function Form(props: Record<string, any>) {
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Address
+                  {changeLanguage().contactForm.formLabels.address}
                 </label>
                 <div className="mt-1">
                   <input
@@ -148,7 +151,7 @@ function Form(props: Record<string, any>) {
                   htmlFor="city"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  City
+                  {changeLanguage().contactForm.formLabels.city}
                 </label>
                 <div className="mt-1">
                   <input
@@ -165,7 +168,7 @@ function Form(props: Record<string, any>) {
                   htmlFor="country"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Country
+                  {changeLanguage().contactForm.formLabels.country}
                 </label>
                 <div className="mt-1">
                   <select
@@ -176,7 +179,7 @@ function Form(props: Record<string, any>) {
                     className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   >
                     <option disabled value="-1">
-                      Select a Country
+                      {changeLanguage().contactForm.formLabels.selectCountry}
                     </option>
                     {countryList.map((country, i) => (
                       <option value={country} key={i}>
@@ -192,13 +195,13 @@ function Form(props: Record<string, any>) {
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Phone
+                    {changeLanguage().contactForm.formLabels.phoneNumber}
                   </label>
                   <span
                     id="phone_description"
                     className="text-sm text-gray-500"
                   >
-                    Optional
+                    {changeLanguage().contactForm.formLabels.optional}
                   </span>
                 </div>
                 <div className="mt-1">
@@ -218,14 +221,15 @@ function Form(props: Record<string, any>) {
                     htmlFor="how_can_we_help"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    How can we help you? (Message
+                    {changeLanguage().contactForm.formLabels.message} ({" "}
+                    {changeLanguage().contactForm.formLabels.messageSub}
                     <span className="text-red-400">*</span>)
                   </label>
                   <span
                     id="how_can_we_help_description"
                     className="text-sm text-gray-500"
                   >
-                    Max. 500 characters
+                    {changeLanguage().contactForm.formLabels.maxChar}
                   </span>
                 </div>
                 <div className="mt-1">
@@ -245,7 +249,7 @@ function Form(props: Record<string, any>) {
                   htmlFor="how_did_you_hear_about_us"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  How did you hear about us?
+                  {changeLanguage().contactForm.formLabels.hearAbout}
                 </label>
                 <div className="mt-1">
                   <select
@@ -254,7 +258,10 @@ function Form(props: Record<string, any>) {
                     defaultValue="-1"
                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                   >
-                    <option value="-1">Select an option</option>
+                    <option value="-1">
+                      {" "}
+                      {changeLanguage().contactForm.formLabels.selectHearAbout}
+                    </option>
                     <option value="website">The website</option>
                     <option value="recommendation">
                       A friend/aquaintance recommended it
@@ -272,7 +279,7 @@ function Form(props: Record<string, any>) {
                   onClick={handleSubmit}
                   className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Submit
+                  {changeLanguage().contactForm.submitButton}
                 </button>
               </div>
             </form>

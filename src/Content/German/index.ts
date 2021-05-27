@@ -1,21 +1,8 @@
-import { ProfessionalAdvice } from "./ProfessionalAdvice";
-import { taxesAndSocialCharges } from "./Taxes&SocialCharges";
+import { aboutUs } from "./AboutUs/index";
+import { livingAndWorking } from "./Living&Working/index";
 import { services } from "./Services/index";
-import { healthCare } from "./HealthCare";
-import { features } from "./Home/Features";
-import { heroSection } from "./Home/HeroSection";
-import { introduction } from "./Home/Introduction";
-import { navMain } from "./Home/NavMain";
 import { footer } from "./Footer";
+import { homePage } from "./Home/index";
+import { contactForm } from "./ContactForm";
 
-export {
-  taxesAndSocialCharges,
-  ProfessionalAdvice,
-  healthCare,
-  features,
-  navMain,
-  introduction,
-  heroSection,
-  footer,
-  services,
-};
+export { livingAndWorking, aboutUs, contactForm, services, homePage, footer };

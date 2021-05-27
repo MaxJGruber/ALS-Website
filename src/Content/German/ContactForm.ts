@@ -1,0 +1,25 @@
+export const contactForm = {
+  title: `Lassen Sie uns zusammen arbeiten`,
+  subTitle: "Wir würden uns freuen, von Ihnen zu hören!",
+  intro:
+    "Wenn Sie an einem unserer Services interessiert sind, zögern Sie bitte nicht, sich mit uns in Verbindung zu setzen. Ein Mitglied unseres Teams hilft Ihnen gerne weiter.",
+  how: "Sie können uns eine Nachricht über das unten stehende Kurzformular senden.",
+  mandatoryFields: "Pflichtfelder sind gekennzeichnet mit",
+  formLabels: {
+    firstName: "Vorname",
+    lastName: "Nachname",
+    email: "Email",
+    address: "Adresse",
+    city: "Stadt",
+    country: "Land",
+    selectCountry: "Land wählen",
+    phoneNumber: "Telefon Nummer",
+    optional: "Fakultativ",
+    message: "Wie können wir Ihnen helfen?",
+    messageSub: "Message",
+    maxChar: "Max. 500 Zeichen",
+    hearAbout: "Woher haben Sie von uns gehört?",
+    selectHearAbout: "Option wählen",
+  },
+  submitButton: "Einreichen",
+};

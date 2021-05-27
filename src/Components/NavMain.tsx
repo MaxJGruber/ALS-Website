@@ -32,7 +32,7 @@ export const NavMain = () => {
                   to="/"
                   className="text-base font-medium text-african-violet hover:text-tertiary-pink"
                 >
-                  {changeLanguage().navMain.navLinks.home}
+                  {changeLanguage().homePage.navMain.navLinks.home}
                 </NavLink>
                 <Popover className="relative">
                   {({ open }) => (
@@ -44,7 +44,7 @@ export const NavMain = () => {
                         )}
                       >
                         <span>
-                          {changeLanguage().navMain.navLinks.services}
+                          {changeLanguage().homePage.navMain.navLinks.services}
                         </span>
                         <ChevronDownIcon
                           className={classNames(
@@ -71,7 +71,7 @@ export const NavMain = () => {
                         >
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
-                              {changeLanguage().navMain.services.map(
+                              {changeLanguage().homePage.navMain.services.map(
                                 (item: Record<string, any>) => (
                                   <NavHashLink
                                     key={item.name}
@@ -108,25 +108,94 @@ export const NavMain = () => {
                   to="/living-working-in-france"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
                 >
-                  {changeLanguage().navMain.navLinks.livingAndWorking}
+                  {changeLanguage().homePage.navMain.navLinks.livingAndWorking}
                 </NavLink>
-                <NavLink
+                {/* <NavLink
                   to="/why-pay-for-professional-advice"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
                 >
-                  {changeLanguage().navMain.navLinks.whyPay}
-                </NavLink>
+                  {changeLanguage().navMain.navLinks.aboutUs}
+                </NavLink> */}
+                <Popover className="relative">
+                  {({ open }) => (
+                    <>
+                      <Popover.Button
+                        className={classNames(
+                          open ? "text-tertiary-pink" : "text-african-violet ",
+                          "group rounded-md inline-flex items-center text-base font-medium hover:text-tertiary-pink focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        )}
+                      >
+                        <span>
+                          {changeLanguage().homePage.navMain.navLinks.aboutUs}
+                        </span>
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? "text-tertiary-pink" : "text-african-violet",
+                            "ml-2 h-5 w-5 group-hover:text-tertiary-pink"
+                          )}
+                          aria-hidden="true"
+                        />
+                      </Popover.Button>
+
+                      <Transition
+                        show={open}
+                        as={Fragment}
+                        enter="transition ease-out duration-200"
+                        enterFrom="opacity-0 translate-y-1"
+                        enterTo="opacity-100 translate-y-0"
+                        leave="transition ease-in duration-150"
+                        leaveFrom="opacity-100 translate-y-0"
+                        leaveTo="opacity-0 translate-y-1"
+                      >
+                        <Popover.Panel
+                          static
+                          className="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-md lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
+                        >
+                          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-1">
+                              {changeLanguage().homePage.navMain.aboutUsSubNav.map(
+                                (item: Record<string, any>) => (
+                                  <NavHashLink
+                                    key={item.name}
+                                    smooth
+                                    to={item.href}
+                                    className="-m-3 p-3 flex items-center justify-start rounded-lg hover:bg-gray-50"
+                                  >
+                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white sm:h-12 sm:w-12">
+                                      <item.icon
+                                        className="h-6 w-6"
+                                        aria-hidden="true"
+                                      />
+                                    </div>
+                                    <div className="ml-4">
+                                      <p className="text-base font-medium text-gray-900">
+                                        {item.name}
+                                      </p>
+                                      {/* <p className="mt-1 text-sm text-gray-500">
+                                      {item.description}
+                                    </p> */}
+                                    </div>
+                                  </NavHashLink>
+                                )
+                              )}
+                            </div>
+                          </div>
+                        </Popover.Panel>
+                      </Transition>
+                    </>
+                  )}
+                </Popover>
                 <NavLink
                   to="/blog"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
                 >
-                  {changeLanguage().navMain.navLinks.blog}
+                  {changeLanguage().homePage.navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
                   to="/fees"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
                 >
-                  {changeLanguage().navMain.navLinks.fees}
+                  {changeLanguage().homePage.navMain.navLinks.fees}
                 </NavLink>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -135,7 +204,7 @@ export const NavMain = () => {
                     to="/contact-us"
                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-african-violet bg-white hover:bg-tertiary-pink hover:text-yellow-200"
                   >
-                    {changeLanguage().navMain.navLinks.contact}
+                    {changeLanguage().homePage.navMain.navLinks.contact}
                   </NavLink>
                 </span>
               </div>
@@ -171,7 +240,7 @@ export const NavMain = () => {
                     </div>
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
-                        {changeLanguage().navMain.services.map(
+                        {changeLanguage().homePage.navMain.services.map(
                           (item: Record<string, any>) => (
                             <NavHashLink
                               key={item.name}
@@ -200,25 +269,28 @@ export const NavMain = () => {
                         to="/living-working-in-france"
                         className="text-base font-medium text-gray-900  hover:text-tertiary-pink"
                       >
-                        {changeLanguage().navMain.navLinks.livingAndWorking}
+                        {
+                          changeLanguage().homePage.navMain.navLinks
+                            .livingAndWorking
+                        }
                       </NavLink>
                       <NavLink
                         to="/why-pay-for-professional-advice"
                         className="text-base font-medium text-gray-900  hover:text-tertiary-pink"
                       >
-                        {changeLanguage().navMain.navLinks.whyPay}
+                        {changeLanguage().homePage.navMain.navLinks.aboutUs}
                       </NavLink>
                       <NavLink
                         to="/blog"
                         className="text-base font-medium text-gray-900  hover:text-tertiary-pink"
                       >
-                        {changeLanguage().navMain.navLinks.blog}
+                        {changeLanguage().homePage.navMain.navLinks.blog}
                       </NavLink>
                       <NavLink
                         to="/fees"
                         className="text-base font-medium text-gray-900  hover:text-tertiary-pink"
                       >
-                        {changeLanguage().navMain.navLinks.fees}
+                        {changeLanguage().homePage.navMain.navLinks.fees}
                       </NavLink>
                     </div>
                     <div className="mt-6">
@@ -226,7 +298,7 @@ export const NavMain = () => {
                         to="/contact-us"
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                       >
-                        {changeLanguage().navMain.navLinks.contact}
+                        {changeLanguage().homePage.navMain.navLinks.contact}
                       </NavLink>
                     </div>
                   </div>

@@ -1,0 +1,25 @@
+export const contactForm = {
+  title: `Travaillons ensemble`,
+  subTitle: "Nous aimerions recevoir de vos nouvelles!",
+  intro:
+    "Si l'un de nos services vous intéresse, n'hésitez pas à nous contacter et un membre de notre équipe se fera un plaisir de vous aider.",
+  how: "Vous pouvez nous envoyer un message en utilisant le formulaire ci-dessous.",
+  mandatoryFields: "Les champs obligatoires sont marqués d'un",
+  formLabels: {
+    firstName: "Prénom",
+    lastName: "Nom de famille",
+    email: "Email",
+    address: "Adresse",
+    city: "Ville",
+    country: "Pays",
+    selectCountry: "Choisir un pays",
+    phoneNumber: "Numéro de téléphone",
+    optional: "Facultatif",
+    message: "Comment pouvons-nous vous aider?",
+    messageSub: "Message",
+    maxChar: "Max. 500 caractères",
+    hearAbout: "Comment avez-vous entendu parler de nous?",
+    selectHearAbout: "Choisir une option",
+  },
+  submitButton: "Soumettre",
+};
