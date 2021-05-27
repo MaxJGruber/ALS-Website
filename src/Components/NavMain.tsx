@@ -34,7 +34,7 @@ export const NavMain = () => {
                 >
                   {changeLanguage().homePage.navMain.navLinks.home}
                 </NavLink>
-                <Popover className="relative">
+                <Popover className="relative ">
                   {({ open }) => (
                     <>
                       <Popover.Button

@@ -1,12 +1,12 @@
 import { NavMain } from "../Components/NavMain";
-import SectionTextWithPic from "../Components/SectionTextWithPic";
+import WhyUsSection from "../Components/WhyUsSection";
 import Footer from "../Components/Footer";
 
-export const FranceAndAdvice = () => {
+export const WhyUs = () => {
   return (
     <div>
       <NavMain />
-      <SectionTextWithPic />
+      <WhyUsSection />
       <Footer />
     </div>
   );
