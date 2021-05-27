@@ -10,6 +10,8 @@ import store from "./redux/store";
 import { connect } from "react-redux";
 import { LivingAndWorking } from "./Pages/Living&Working";
 import { WhyUs } from "./Pages/WhyUs";
+import CookiesBanner from "./Components/CookiesBanner";
+import { Legal } from "./Pages/Legal";
 
 const mapDispatchToProps = (dispatch: Function) => ({
   setContent: (content: Record<string, any>) =>
@@ -46,8 +48,10 @@ function App() {
         <Route exact path="/fees" component={Fees} />
         <Route exact path="/blog" component={Blog} />
         <Route exact path="/about-us" component={Team} />
+        <Route exact path="/legal" component={Legal} />
         <Route exact path="/contact-us" component={ContactUs} />
       </Switch>
+      <CookiesBanner />
     </div>
   );
 }

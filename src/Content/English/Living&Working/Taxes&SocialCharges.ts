@@ -3,6 +3,7 @@ import { localPropertyTax } from "./TaxTypes/LocalPropertyTax";
 import { residenceTax } from "./TaxTypes/ResidenceTax";
 import { propertyOwnershipTax } from "./TaxTypes/PropertyOwnershipTax";
 import { professionalPropTax } from "./TaxTypes/ProfessionalPropTax";
+import { professionalTaxAndSocialCharge } from "./TaxTypes/ProfessionalTax&SocialCharge";
 
 export const taxesAndSocialCharges = {
   title: "French Taxes And Social Charges",
@@ -22,4 +23,5 @@ export const taxesAndSocialCharges = {
   residenceTax,
   propertyOwnershipTax,
   professionalPropTax,
+  professionalTaxAndSocialCharge,
 };

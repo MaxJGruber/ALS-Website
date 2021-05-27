@@ -104,12 +104,6 @@ export const NavMain = () => {
                   )}
                 </Popover>
 
-                <NavLink
-                  to="/living-working-in-france"
-                  className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
-                >
-                  {changeLanguage().homePage.navMain.navLinks.livingAndWorking}
-                </NavLink>
                 {/* <NavLink
                   to="/why-pay-for-professional-advice"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
@@ -185,6 +179,13 @@ export const NavMain = () => {
                     </>
                   )}
                 </Popover>
+
+                <NavLink
+                  to="/fees"
+                  className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
+                >
+                  {changeLanguage().homePage.navMain.navLinks.fees}
+                </NavLink>
                 <NavLink
                   to="/blog"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
@@ -192,10 +193,10 @@ export const NavMain = () => {
                   {changeLanguage().homePage.navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
-                  to="/fees"
+                  to="/living-working-in-france"
                   className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
                 >
-                  {changeLanguage().homePage.navMain.navLinks.fees}
+                  {changeLanguage().homePage.navMain.navLinks.livingAndWorking}
                 </NavLink>
               </Popover.Group>
               <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">

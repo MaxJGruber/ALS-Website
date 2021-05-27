@@ -17,9 +17,9 @@ export const footer = {
   ],
   title4: "Legal",
   legal: [
-    { name: "Policy", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms & Conditions", href: "#" },
+    { name: "Policy", href: "/legal" },
+    { name: "Privacy", href: "/legal" },
+    { name: "Terms & Conditions", href: "/legal" },
   ],
   switch: "Switch language",
   button: "Confirm",

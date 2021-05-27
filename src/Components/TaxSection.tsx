@@ -19,6 +19,9 @@ export default function TaxSection(props: Record<string, any>) {
       case "prop own tax":
         setSelectedTax(content.propertyOwnershipTax);
         break;
+      case "prof social tax":
+        setSelectedTax(content.professionalTaxAndSocialCharge);
+        break;
       case "prof prop tax":
         setSelectedTax(content.professionalPropTax);
         break;
@@ -35,8 +38,10 @@ export default function TaxSection(props: Record<string, any>) {
                 {selectedTax.name}
               </p>
 
-              {selectedTax.text.map((elem: string) => (
-                <p className="mt-6 text-lg font-medium text-gray-700">{elem}</p>
+              {selectedTax.text.map((elem: string, i: number) => (
+                <p key={i} className="mt-6 text-lg font-medium text-gray-700">
+                  {elem}
+                </p>
               ))}
               {selectedTax.liableIf && (
                 <>
@@ -45,8 +50,11 @@ export default function TaxSection(props: Record<string, any>) {
                   </p>
                   <ul>
                     {selectedTax.cases &&
-                      selectedTax.cases.map((elem: string) => (
-                        <p className="mt-6 text-lg font-bold text-gray-700">
+                      selectedTax.cases.map((elem: string, i: number) => (
+                        <p
+                          key={i}
+                          className="mt-6 text-lg font-bold text-gray-700"
+                        >
                           - {elem}
                         </p>
                       ))}
@@ -54,8 +62,8 @@ export default function TaxSection(props: Record<string, any>) {
                 </>
               )}
               {selectedTax.text2 &&
-                selectedTax.text2.map((elem: string) => (
-                  <p className="mt-6 text-lg font-medium text-gray-700">
+                selectedTax.text2.map((elem: string, i: number) => (
+                  <p key={i} className="mt-6 text-lg font-medium text-gray-700">
                     {elem}
                   </p>
                 ))}

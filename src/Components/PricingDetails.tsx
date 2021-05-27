@@ -5,8 +5,8 @@ const plans = [
     title: "Starter",
     featured: false,
     description: "All your essential business finances, taken care of.",
-    priceMonthly: 399,
-    priceYearly: 1195,
+    price: 1195,
+    pricePounds: 1029,
     mainFeatures: [
       { id: 1, value: "Integration into the French health system" },
       {
@@ -20,8 +20,8 @@ const plans = [
     title: "Standard Plus",
     featured: true,
     description: "The best financial services for your thriving business.",
-    priceMonthly: 565,
-    priceYearly: 1695,
+    price: 1695,
+    pricePounds: 1459,
     mainFeatures: [
       { id: 1, value: "Integration into the French health system" },
       {
@@ -42,8 +42,8 @@ const plans = [
     title: "Premium",
     featured: false,
     description: "Convenient features to take your business to the next level.",
-    priceMonthly: 832,
-    priceYearly: 2495,
+    price: 2495,
+    pricePounds: 2148,
     mainFeatures: [
       { id: 1, value: "Basic invoicing" },
       { id: 2, value: "Easy to use accounting" },
@@ -186,7 +186,7 @@ export default function PricingSection() {
               className="hidden absolute w-full h-6 bottom-0 lg:block"
             />
 
-            <div className="relative max-w-2xl mx-auto pt-10 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="relative max-w-2xl mx-auto pt-10 px-4 text-center sm:pt-15 sm:px-6 lg:max-w-7xl lg:px-8">
               <h1 className="text-4xl mb-10 font-extrabold tracking-tight text-gray-900 sm:text-6xl">
                 <span className="block lg:inline">Simple pricing,</span>
                 <span className="block lg:inline">&nbsp;simple life.</span>
@@ -241,7 +241,7 @@ export default function PricingSection() {
                               "text-4xl font-extrabold tracking-tight"
                             )}
                           >
-                            {plan.priceMonthly}€
+                            {plan.price}€
                           </p>
                           <div className="ml-4">
                             <p
@@ -250,7 +250,7 @@ export default function PricingSection() {
                                 "text-sm"
                               )}
                             >
-                              EUR / every trimester
+                              EUR / per year
                             </p>
                             <p
                               className={classNames(
@@ -260,7 +260,7 @@ export default function PricingSection() {
                                 "text-sm"
                               )}
                             >
-                              Billed yearly ({plan.priceYearly}€)
+                              In GBP: ~ £{plan.pricePounds}
                             </p>
                           </div>
                         </div>

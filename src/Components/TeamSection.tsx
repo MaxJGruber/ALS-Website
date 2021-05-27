@@ -1,6 +1,7 @@
 import madelineAboutPic from "../Assets/madeline-about-pic.jpeg";
 import yvonnePic from "../Assets/yvonne-pic.jpeg";
 import teamwork from "../Assets/undraw_Work_time_re_hdyv.png";
+import avatar from "../Assets/undraw_profile_pic_ic5t.png";
 
 const people = [
   {
@@ -12,9 +13,16 @@ const people = [
   },
   {
     name: "Madeline Aveson",
-    role: "Co-Founder / CEO",
+    role: "Co-Founder / General Director",
     imageUrl: madelineAboutPic,
     bio: "Having spent 24 years working at Disneyland Paris, Madeline Aveson is used to putting excellence at the heart of business. Completely bilingual she can help with questions concerning your day to day life in France and co-ordinate any project management needs.",
+    linkedinUrl: "https://www.linkedin.com/in/madeline-aveson-gruber-66a6b06/",
+  },
+  {
+    name: "Thomas Hettlage",
+    role: "Shareholder",
+    imageUrl: avatar,
+    bio: "From a background in banking and Law through to a career in central buying and brand management, Thomas Hettlage has been an art dealer, gallery owner, photographer and published Author. Originally from Germany, Switzerland and now south west France, he brings his vast business knowledge and passion for photography to our company.",
     linkedinUrl: "https://www.linkedin.com/in/madeline-aveson-gruber-66a6b06/",
   },
   // More people...
@@ -57,7 +65,7 @@ export default function TeamSection() {
                           <h3>{person.name}</h3>
                           <p className="text-indigo-600">{person.role}</p>
                         </div>
-                        <div className="text-lg">
+                        <div className="text-lg text-left">
                           <p className="text-gray-500">{person.bio}</p>
                         </div>
                         <ul className="flex space-x-5">

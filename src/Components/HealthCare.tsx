@@ -87,8 +87,8 @@ export default function HealthCare() {
             <div className="lg:grid lg:grid-cols-2 lg:gap-6">
               <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
                 {changeLanguage().livingAndWorking.healthCare.intro.map(
-                  (elem: string) => (
-                    <p>{elem}</p>
+                  (elem: string, i) => (
+                    <p key={i}>{elem}</p>
                   )
                 )}
                 <p>
@@ -109,8 +109,8 @@ export default function HealthCare() {
                 </p>
                 <ul>
                   {changeLanguage().livingAndWorking.healthCare.dualSystems.map(
-                    (elem: string) => (
-                      <li>{elem}</li>
+                    (elem: string, i) => (
+                      <li key={i}>{elem}</li>
                     )
                   )}
                 </ul>
@@ -118,8 +118,8 @@ export default function HealthCare() {
                 <p>{changeLanguage().livingAndWorking.healthCare.PUMALaw}</p>
                 <ul>
                   {changeLanguage().livingAndWorking.healthCare.conditions.map(
-                    (elem: string) => (
-                      <li>{elem}</li>
+                    (elem: string, i) => (
+                      <li key={i}>{elem}</li>
                     )
                   )}
                 </ul>
@@ -147,10 +147,10 @@ export default function HealthCare() {
                     {changeLanguage().livingAndWorking.healthCare.door2Suite}
                     <br />
                     {changeLanguage().livingAndWorking.healthCare.door2NB.map(
-                      (elem: string) => (
+                      (elem: string, i) => (
                         <>
                           <br />
-                          <i>{elem}</i>
+                          <i key={i}>{elem}</i>
                           <br />
                         </>
                       )
@@ -174,8 +174,14 @@ export default function HealthCare() {
               </div>
             </div>
             <div className="grid grid-cols-2">
-              <img src={healthCarePic} alt="" />
-              <img src={healthCarePic2} alt="" />
+              <img
+                src={healthCarePic}
+                alt="Two nurses with a big bottle of pills"
+              />
+              <img
+                src={healthCarePic2}
+                alt="Two doctors standing next to a window"
+              />
             </div>
             <div className="mt-8">
               <p className=" text-xl text-center leading-6 font-extrabold tracking-tight text-gray-900 sm:text-xl">
@@ -184,11 +190,13 @@ export default function HealthCare() {
               <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
                 <p>
                   {changeLanguage().livingAndWorking.healthCare.faq.map(
-                    (elem: { question: string; answer: string[] }) => (
+                    (elem: { question: string; answer: string[] }, i) => (
                       <>
-                        <p className="font-bold">{elem.question}</p>
-                        {elem.answer.map((elem: string) => (
-                          <p>{elem}</p>
+                        <p key={i} className="font-bold">
+                          {elem.question}
+                        </p>
+                        {elem.answer.map((elem: string, i) => (
+                          <p key={i}>{elem}</p>
                         ))}
                       </>
                     )

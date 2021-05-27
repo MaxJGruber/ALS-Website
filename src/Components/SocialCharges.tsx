@@ -89,15 +89,17 @@ export default function SocialCharges() {
           <div className="relative md:bg-white md:p-6">
             <div className="prose text-left prose-indigo prose-lg text-gray-500 lg:max-w-none">
               {changeLanguage().livingAndWorking.taxesAndSocialCharges.introduction.map(
-                (elem) => (
-                  <p>{elem}</p>
+                (elem, i) => (
+                  <p key={i}>{elem}</p>
                 )
               )}
               <div className="grid grid-cols-2">
                 <div className="flex flex-col justify-center">
                   {changeLanguage().livingAndWorking.taxesAndSocialCharges.warning.map(
-                    (elem) => (
-                      <p className="font-bold text-center">{elem}</p>
+                    (elem, i) => (
+                      <p key={i} className="font-bold text-center">
+                        {elem}
+                      </p>
                     )
                   )}
                   <p className="text-center">
