@@ -6,8 +6,8 @@ import { connect } from "react-redux";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
-
 import logo from "../Assets/ALS_logo.png";
+
 interface iconProps {
   className: string;
   "aria-hidden": "true" | "false";

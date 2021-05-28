@@ -7,21 +7,12 @@ import { Blog } from "./Pages/Blog";
 import { Team } from "./Pages/Team";
 import { Services } from "./Pages/Services";
 import store from "./redux/store";
-import { connect } from "react-redux";
 import { LivingAndWorking } from "./Pages/Living&Working";
 import { WhyUs } from "./Pages/WhyUs";
 import CookiesBanner from "./Components/CookiesBanner";
 import { Legal } from "./Pages/Legal";
 
-const mapDispatchToProps = (dispatch: Function) => ({
-  setContent: (content: Record<string, any>) =>
-    dispatch({ type: "SET_CONTENT", content }),
-});
-const mapStateToProps = (state: Record<string, any>) => {
-  return { content: state.content };
-};
-
-function App() {
+export default function App() {
   const [contentLanguage, setContentLanguage] = useState("en");
 
   useEffect(() => {
@@ -55,4 +46,4 @@ function App() {
     </div>
   );
 }
-export default connect(mapDispatchToProps, mapStateToProps)(App);
+

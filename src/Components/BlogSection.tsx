@@ -4,13 +4,23 @@ import profilePic from "../Assets/madeline-pic.jpeg";
 import blogging from "../Assets/undraw_blogging_vpvv.png";
 import moment from "moment";
 
+interface BlogObject {
+  title: string;
+  pubDate: string;
+  link: string;
+  author: string;
+  categories: string[];
+  thumbnail: string;
+}
+
 export default function BlogSection() {
-  const [articles, setArticles] = useState<Array<Record<string, any>>>([]);
+  const [articles, setArticles] = useState<Array<BlogObject>>([]);
   useEffect(() => {
     if (!articles.length) {
       getMediumFeed().then((response) => setArticles(response.items));
     }
   }, [articles.length]);
+  console.log(articles);
   return (
     <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8">
       <div className="absolute inset-0">
@@ -63,25 +73,22 @@ export default function BlogSection() {
                   </a>
                 </p>
                 <div className="flex-1 flex items-center justify-center">
-                  <a href={post.href} className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">
-                      {post.title}
-                    </p>
-
-                    {/* {console.log(new DOMParser().parseFromString(post.description, "text/xml"))} */}
-                    {/* {post.description} */}
-                  </a>
+                  {/* <a href={post.href} className="block mt-2"> */}
+                  <p className="text-xl font-semibold text-gray-900">
+                    {post.title}
+                  </p>
+                  {/* </a> */}
                 </div>
                 <div className="mt-6 flex items-center">
                   <div className="flex-shrink-0">
-                    <a href={post.author.href}>
-                      <span className="sr-only">{post.author.name}</span>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={profilePic}
-                        alt=""
-                      />
-                    </a>
+                    {/* <a href={post.author.href}> */}
+                    <span className="sr-only">{post.author}</span>
+                    <img
+                      className="h-10 w-10 rounded-full"
+                      src={profilePic}
+                      alt=""
+                    />
+                    {/* </a> */}
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-medium text-gray-900">
@@ -96,7 +103,7 @@ export default function BlogSection() {
                       </a>
                     </p>
                     <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={post.datetime}>
+                      <time>
                         {moment(post.pubDate).format("dddd, MMMM Do YYYY")}
                       </time>
                       <span aria-hidden="true">&middot;</span>
