@@ -37,7 +37,7 @@ export default function BlogSection() {
               latest rule & regulation changes decided by the French government.
             </p>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-              If you struggly to find correct and concise information relating
+              If you struggle to find correct and concise information relating
               to travels or life in France, look no further!
             </p>
             <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">

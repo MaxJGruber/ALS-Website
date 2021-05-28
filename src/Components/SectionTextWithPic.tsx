@@ -36,16 +36,20 @@ export default function SectionTextWithPic(props: { section: string }) {
                   {content.title}
                 </h2>
                 <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  On a mission to empower teams
+                  Let's get you settled
                 </h3>
                 <div className="mt-6 prose prose-indigo text-gray-500 space-y-6">
-                  {content.text.map((elem: string) => (
-                    <p className="text-lg">{elem}</p>
+                  {content.text.map((elem: string, i: number) => (
+                    <p key={i} className="text-lg">
+                      {elem}
+                    </p>
                   ))}
                   <p className="text-base leading-7">{content.listTitle}</p>
                   <ul className="text-left">
-                    {content.list.map((elem: string) => (
-                      <li className="text-lg">{elem}</li>
+                    {content.list.map((elem: string, i: number) => (
+                      <li key={i} className="text-lg">
+                        {elem}
+                      </li>
                     ))}
                   </ul>
                   {props.section === "property-management" ? (
@@ -54,16 +58,22 @@ export default function SectionTextWithPic(props: { section: string }) {
                         {content.conciergeServicesTitle}
                       </p>
                       <ul>
-                        {content.conciergeServicesList.map((elem: string) => (
-                          <li className="text-left text-lg">{elem}</li>
-                        ))}
+                        {content.conciergeServicesList.map(
+                          (elem: string, i: number) => (
+                            <li key={i} className="text-left text-lg">
+                              {elem}
+                            </li>
+                          )
+                        )}
                       </ul>
                     </>
                   ) : (
                     <>
                       <h3>We’re here to help</h3>
-                      {content.text2.map((elem: string) => (
-                        <p className="text-lg">{elem}</p>
+                      {content.text2.map((elem: string, i: number) => (
+                        <p key={i} className="text-lg">
+                          {elem}
+                        </p>
                       ))}
                     </>
                   )}

@@ -1,6 +1,7 @@
 import changeLanguage from "../redux/languageContent";
 import healthCarePic from "../Assets/undraw_medical_care_movn.png";
 import healthCarePic2 from "../Assets/undraw_doctors_hwty.png";
+import Flip from "react-reveal/Flip";
 
 export default function HealthCare() {
   return (
@@ -174,34 +175,34 @@ export default function HealthCare() {
               </div>
             </div>
             <div className="grid grid-cols-2">
-              <img
-                src={healthCarePic}
-                alt="Two nurses with a big bottle of pills"
-              />
-              <img
-                src={healthCarePic2}
-                alt="Two doctors standing next to a window"
-              />
+              <Flip right>
+                <img
+                  src={healthCarePic}
+                  alt="Two nurses with a big bottle of pills"
+                />
+                <img
+                  src={healthCarePic2}
+                  alt="Two doctors standing next to a window"
+                />
+              </Flip>
             </div>
             <div className="mt-8">
               <p className=" text-xl text-center leading-6 font-extrabold tracking-tight text-gray-900 sm:text-xl">
                 F.A.Q.
               </p>
               <div className="prose text-left  prose-indigo prose-lg text-gray-500 lg:max-w-none">
-                <p>
-                  {changeLanguage().livingAndWorking.healthCare.faq.map(
-                    (elem: { question: string; answer: string[] }, i) => (
-                      <>
-                        <p key={i} className="font-bold">
-                          {elem.question}
-                        </p>
-                        {elem.answer.map((elem: string, i) => (
-                          <p key={i}>{elem}</p>
-                        ))}
-                      </>
-                    )
-                  )}
-                </p>
+                {changeLanguage().livingAndWorking.healthCare.faq.map(
+                  (elem: { question: string; answer: string[] }, i) => (
+                    <>
+                      <p key={i} className="font-bold">
+                        {elem.question}
+                      </p>
+                      {elem.answer.map((elem: string, i) => (
+                        <p key={i}>{elem}</p>
+                      ))}
+                    </>
+                  )
+                )}
               </div>
             </div>
           </div>

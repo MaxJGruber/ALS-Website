@@ -2,6 +2,7 @@ import { useState } from "react";
 import changeLanguage from "../redux/languageContent";
 import TaxSection from "./TaxSection";
 import calculatorPic from "../Assets/undraw_Calculator_0evy.png";
+import Flip from "react-reveal/Flip";
 
 export default function SocialCharges() {
   const [selectedTax, setSelectedTax] = useState("personal tax");
@@ -110,7 +111,13 @@ export default function SocialCharges() {
                   </p>
                 </div>
                 <div className="flex justify-center">
-                  <img src={calculatorPic} className="taxes-pic" alt="" />
+                  <Flip right>
+                    <img
+                      src={calculatorPic}
+                      className="taxes-pic"
+                      alt="Man typing on calculator"
+                    />
+                  </Flip>
                 </div>
               </div>
               <span className="relative z-0 flex flex-col sm:flex-row inline-flex shadow-sm rounded-md">

@@ -7,6 +7,21 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import logo from "../Assets/ALS_logo.png";
 
+interface serviceObject {
+  name: string;
+  description: string;
+  href: string;
+  icon: typeof MenuIcon;
+  imageUrl: string;
+}
+
+interface aboutUsSubNavObject {
+  name: string;
+  description: string;
+  href: string;
+  icon: typeof MenuIcon;
+}
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -72,7 +87,7 @@ export const NavMain = () => {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                               {changeLanguage().homePage.navMain.services.map(
-                                (item: Record<string, any>) => (
+                                (item: serviceObject) => (
                                   <NavHashLink
                                     key={item.name}
                                     smooth
@@ -148,7 +163,7 @@ export const NavMain = () => {
                           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-1">
                               {changeLanguage().homePage.navMain.aboutUsSubNav.map(
-                                (item: Record<string, any>) => (
+                                (item: aboutUsSubNavObject) => (
                                   <NavHashLink
                                     key={item.name}
                                     smooth
@@ -242,7 +257,27 @@ export const NavMain = () => {
                     <div className="mt-6">
                       <nav className="grid grid-cols-1 gap-7">
                         {changeLanguage().homePage.navMain.services.map(
-                          (item: Record<string, any>) => (
+                          (item: serviceObject) => (
+                            <NavHashLink
+                              key={item.name}
+                              smooth
+                              to={item.href}
+                              className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                            >
+                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                                <item.icon
+                                  className="h-6 w-6"
+                                  aria-hidden="true"
+                                />
+                              </div>
+                              <div className="ml-4 text-base font-medium text-gray-900">
+                                {item.name}
+                              </div>
+                            </NavHashLink>
+                          )
+                        )}
+                        {changeLanguage().homePage.navMain.aboutUsSubNav.map(
+                          (item: aboutUsSubNavObject) => (
                             <NavHashLink
                               key={item.name}
                               smooth

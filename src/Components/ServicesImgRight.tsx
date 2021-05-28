@@ -23,20 +23,22 @@ export default function ServicesImgRight(props: { section: string }) {
             </p>
           </div>
           <div className="relative z-10 text-left text-base max-w-prose mx-auto lg:max-w-6xl lg:mx-0 ">
-            {content.text.map((elem: string) => (
+            {content.text.map((elem: string, i: number) => (
               <>
-                <p className="text-lg text-gray-500"> {elem}</p>
+                <p key={i} className="text-lg text-gray-500">
+                  {elem}
+                </p>
                 <br />
               </>
             ))}
           </div>
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center ">
             <div className="relative z-10">
               <div className="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
                 <p className="text-lg">{content.listTitle}</p>
                 <ul className="text-left">
-                  {content.list.map((listElem: string) => (
-                    <li>{listElem}</li>
+                  {content.list.map((listElem: string, i: number) => (
+                    <li key={i}>{listElem}</li>
                   ))}
                 </ul>
               </div>
@@ -87,8 +89,8 @@ export default function ServicesImgRight(props: { section: string }) {
           <div className="prose prose-indigo text-center text-gray-500 mx-auto lg:max-w-none">
             <h3>We’re here to help</h3>
             <p>
-              {content.text2.map((elem: string) => (
-                <p>{elem}</p>
+              {content.text2.map((elem: string, i: number) => (
+                <p key={i}>{elem}</p>
               ))}
             </p>
           </div>
