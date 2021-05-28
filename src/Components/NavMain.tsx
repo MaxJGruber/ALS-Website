@@ -17,7 +17,7 @@ export const NavMain = () => {
       <Popover className="relative">
         {({ open }) => (
           <>
-            <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-6 sm:px-6 md:justify-start md:space-x-10 ">
+            <div className="flex justify-between items-center max-w-9xl mx-auto px-0 py-9 sm:px-6 md:justify-start md:space-x-10 ">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <img className="h-8 w-auto sm:h-12" src={logo} alt="ALS logo" />
               </div>
@@ -30,7 +30,7 @@ export const NavMain = () => {
               <Popover.Group as="nav" className="hidden md:flex space-x-10">
                 <NavLink
                   to="/"
-                  className="text-base font-medium text-african-violet hover:text-tertiary-pink"
+                  className="text-lg font-medium text-african-violet hover:text-tertiary-pink"
                 >
                   {changeLanguage().homePage.navMain.navLinks.home}
                 </NavLink>
@@ -40,7 +40,7 @@ export const NavMain = () => {
                       <Popover.Button
                         className={classNames(
                           open ? "text-tertiary-pink" : "text-african-violet ",
-                          "group rounded-md inline-flex items-center text-base font-medium hover:text-tertiary-pink focus:outline-none focus:ring-2 focus:ring-offset-2"
+                          "group rounded-md inline-flex items-center text-lg font-medium hover:text-tertiary-pink focus:outline-none focus:ring-2 focus:ring-offset-2"
                         )}
                       >
                         <span>
@@ -116,7 +116,7 @@ export const NavMain = () => {
                       <Popover.Button
                         className={classNames(
                           open ? "text-tertiary-pink" : "text-african-violet ",
-                          "group rounded-md inline-flex items-center text-base font-medium hover:text-tertiary-pink focus:outline-none focus:ring-2 focus:ring-offset-2"
+                          "group rounded-md inline-flex items-center text-lg font-medium hover:text-tertiary-pink focus:outline-none focus:ring-2 focus:ring-offset-2"
                         )}
                       >
                         <span>
@@ -182,19 +182,19 @@ export const NavMain = () => {
 
                 <NavLink
                   to="/fees"
-                  className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
+                  className="text-lg  font-medium text-african-violet  hover:text-tertiary-pink"
                 >
                   {changeLanguage().homePage.navMain.navLinks.fees}
                 </NavLink>
                 <NavLink
                   to="/blog"
-                  className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
+                  className="text-lg  font-medium text-african-violet  hover:text-tertiary-pink"
                 >
                   {changeLanguage().homePage.navMain.navLinks.blog}
                 </NavLink>
                 <NavLink
                   to="/living-working-in-france"
-                  className="text-base font-medium text-african-violet  hover:text-tertiary-pink"
+                  className="text-lg  font-medium text-african-violet  hover:text-tertiary-pink"
                 >
                   {changeLanguage().homePage.navMain.navLinks.livingAndWorking}
                 </NavLink>
@@ -203,7 +203,7 @@ export const NavMain = () => {
                 <span className="inline-flex rounded-md shadow">
                   <NavLink
                     to="/contact-us"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-african-violet bg-white hover:bg-tertiary-pink hover:text-yellow-200"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-lg  font-medium rounded-md text-african-violet bg-white hover:bg-tertiary-pink hover:text-yellow-200"
                   >
                     {changeLanguage().homePage.navMain.navLinks.contact}
                   </NavLink>

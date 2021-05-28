@@ -5,7 +5,7 @@ import calculatorPic from "../Assets/undraw_Calculator_0evy.png";
 
 export default function SocialCharges() {
   const [selectedTax, setSelectedTax] = useState("personal tax");
-  console.log(selectedTax);
+
   return (
     <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-max lg:max-w-7xl mx-auto">
@@ -15,7 +15,7 @@ export default function SocialCharges() {
               {changeLanguage().livingAndWorking.taxesAndSocialCharges.title}
             </h2>
             <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              A better way to send money
+              Confusing, yet necessary
             </p>
           </div>
         </div>

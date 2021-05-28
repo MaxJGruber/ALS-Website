@@ -53,7 +53,7 @@ function CookiesBanner(props: Record<string, any>) {
                 </span>
                 <span className="block sm:ml-2 sm:inline-block">
                   <NavLink
-                    to="/cookie-policy"
+                    to="/legal"
                     className="text-white font-bold underline"
                   >
                     {changeLanguage().cookieBanner.linkText}

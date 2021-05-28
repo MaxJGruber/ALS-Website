@@ -12,6 +12,10 @@ export default function Features() {
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
             {changeLanguage().homePage.features.title}
           </h2>
+          <p className="mt-7 text-lg">
+            At Aquitaine Lifestyle Solutions, we cover all the necessary duties
+            to help you live hassle-free and joyously in France.
+          </p>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-4 lg:max-w-none">
           {changeLanguage().homePage.features.services.map(
@@ -33,13 +37,6 @@ export default function Features() {
                       <p className="text-xl font-semibold text-gray-900">
                         {service.name}
                       </p>
-                      {/* <NavHashLink
-                        smooth
-                        to={service.href}
-                        className="hover:underline"
-                      >
-                        {service.name}
-                      </NavHashLink> */}
                     </p>
                     <NavHashLink
                       smooth

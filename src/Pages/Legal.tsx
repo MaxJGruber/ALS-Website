@@ -2,15 +2,19 @@ import { NavMain } from "../Components/NavMain";
 import Footer from "../Components/Footer";
 import changeLanguage from "../redux/languageContent";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
+import { SupportIcon } from "@heroicons/react/outline";
 
-import { PhoneIcon, SupportIcon } from "@heroicons/react/outline";
+import * as docEn from "../Content/Terms&Conditions/GTC_en_v19.3.pdf";
+import * as docFr from "../Content/Terms&Conditions/GTC_fr_v19.3.pdf";
 
 const supportLinks = [
   {
     name: "Privacy & Cookie Policy",
     href: "https://tools.google.com/dlpage/gaoptout",
     description: changeLanguage().cookiePolicy.text,
-    icon: PhoneIcon,
+    icon: faCookieBite,
   },
   {
     name: "Terms & Conditions",
@@ -72,8 +76,9 @@ export const Legal = () => {
               >
                 <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                   <div className="absolute top-0 p-5  bg-indigo-600 rounded-xl shadow-lg transform -translate-y-1/2">
-                    <link.icon
-                      className="h-6 w-6 text-white"
+                    <FontAwesomeIcon
+                      icon={faCookieBite}
+                      className="text-xl text-white"
                       aria-hidden="true"
                     />
                   </div>
@@ -84,23 +89,22 @@ export const Legal = () => {
                   {link.description.map((elem: string, i) => (
                     <p className="mt-4 text-base text-gray-500">{elem}</p>
                   ))}
-                  {/* {link.name === "Terms & Conditions" && (
+                  {link.name === "Terms & Conditions" && (
                     <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
                       <a
-                        href="../../public/Terms&Conditions/GTC_en_v19.3.pdf"
-                        target="_blank"
+                        href={docEn.default}
                         className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
-                        Button text
+                        Terms & Conditions in English
                       </a>
-                      <button
-                        type="button"
+                      <a
+                        href={docFr.default}
                         className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
-                        Button text
-                      </button>
+                        Terms & Conditions in French
+                      </a>
                     </div>
-                  )} */}
+                  )}
                 </div>
                 <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
                   <a

@@ -12,7 +12,7 @@ export const HeroSection = () => {
       {/* Hero card */}
       <div className="relative">
         <div className="absolute inset-x-0 bottom-0 h-1/2" />
-        <div className="max-w-8xl my-10 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-8xl my-auto mx-auto sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div className="absolute inset-0">
               <img
@@ -22,7 +22,7 @@ export const HeroSection = () => {
               />
               <div className="absolute inset-0 bg-purple-500 mix-blend-multiply" />
             </div>
-            <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+            <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 xl:py-40 lg:px-8">
               <h1 className="text-center pb-4 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                 <span className="block text-white">
                   {changeLanguage().homePage.heroSection.taglinePart1}

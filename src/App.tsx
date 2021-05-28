@@ -11,6 +11,7 @@ import { LivingAndWorking } from "./Pages/Living&Working";
 import { WhyUs } from "./Pages/WhyUs";
 import CookiesBanner from "./Components/CookiesBanner";
 import { Legal } from "./Pages/Legal";
+import { TermsAndConditionsEn } from "./Pages/Terms&ConditionEn";
 
 export default function App() {
   const [contentLanguage, setContentLanguage] = useState("en");
@@ -46,4 +47,3 @@ export default function App() {
     </div>
   );
 }
-
