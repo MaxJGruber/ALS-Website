@@ -1,4 +1,5 @@
 import changeLanguage from "../redux/languageContent";
+import { NavLink } from "react-router-dom";
 
 const stats = [
   { label: "Founded", value: "2021" },
@@ -184,22 +185,18 @@ export default function WhyUsSection() {
                   ))}
                 </dl>
                 <div className="mt-10">
-                  <a href="#" className="text-base font-medium text-indigo-600">
-                    {" "}
-                    Learn more about how we're changing the world{" "}
-                    <span aria-hidden="true">&rarr;</span>{" "}
-                  </a>
+                  <NavLink
+                    to="/about-us"
+                    className="text-base font-medium text-indigo-600"
+                  >
+                    Learn more about ALS
+                    <span aria-hidden="true">&rarr;</span>
+                  </NavLink>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* <div className="mt-6 prose prose-indigo text-gray-500 space-y-6">
-          <p>{changeLanguage().aboutUs.ProfessionalAdvice.para9}</p>
-          <p>{changeLanguage().aboutUs.ProfessionalAdvice.para10}</p>
-          <p>{changeLanguage().aboutUs.ProfessionalAdvice.conclusion1}</p>
-          <p>{changeLanguage().aboutUs.ProfessionalAdvice.conclusion2}</p>
-        </div> */}
       </div>
     </div>
   );

@@ -4,15 +4,18 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./index.css";
 import App from "./App";
+import ScrollToTop from "./Components/ScrollToTop";
 import store from "./redux/store";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
+      <ScrollToTop>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ScrollToTop>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

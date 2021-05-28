@@ -1,10 +1,11 @@
 import { NavMain } from "../Components/NavMain";
 import Footer from "../Components/Footer";
 import changeLanguage from "../redux/languageContent";
-import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
-import { SupportIcon } from "@heroicons/react/outline";
+import {
+  faCookieBite,
+  faBalanceScale,
+} from "@fortawesome/free-solid-svg-icons";
 
 import * as docEn from "../Content/Terms&Conditions/GTC_en_v19.3.pdf";
 import * as docFr from "../Content/Terms&Conditions/GTC_fr_v19.3.pdf";
@@ -13,6 +14,7 @@ const supportLinks = [
   {
     name: "Privacy & Cookie Policy",
     href: "https://tools.google.com/dlpage/gaoptout",
+    linkText: "Click here to Analytics opt-out",
     description: changeLanguage().cookiePolicy.text,
     icon: faCookieBite,
   },
@@ -23,7 +25,7 @@ const supportLinks = [
       `These terms and conditions, as may be amended from time to time, apply to all our services directly or indirectly (through distributors) made available online, through any mobile device, by email or by telephone.`,
       `By accessing, browsing and using our (mobile) website or any of our applications through whatever platform and/or by signing a contract, you acknowledge and agree to have read, understood and agreed to the terms and conditions set out in the links below.`,
     ],
-    icon: SupportIcon,
+    icon: faBalanceScale,
   },
 ];
 
@@ -42,7 +44,7 @@ export const Legal = () => {
               alt=""
             />
             <div
-              className="absolute inset-0 bg-gray-800 mix-blend-multiply"
+              className="absolute inset-0 bg-gray-700 mix-blend-multiply"
               aria-hidden="true"
             />
           </div>
@@ -62,7 +64,7 @@ export const Legal = () => {
 
         {/* Overlapping cards */}
         <section
-          className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+          className="-mt-40 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
           aria-labelledby="contact-heading"
         >
           <h2 className="sr-only" id="contact-heading">
@@ -77,8 +79,8 @@ export const Legal = () => {
                 <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                   <div className="absolute top-0 p-5  bg-indigo-600 rounded-xl shadow-lg transform -translate-y-1/2">
                     <FontAwesomeIcon
-                      icon={faCookieBite}
-                      className="text-xl text-white"
+                      icon={link.icon}
+                      className="text-2xl text-white"
                       aria-hidden="true"
                     />
                   </div>
@@ -87,18 +89,24 @@ export const Legal = () => {
                   </h3>
 
                   {link.description.map((elem: string, i) => (
-                    <p className="mt-4 text-base text-gray-500">{elem}</p>
+                    <p key={i} className="mt-4 text-base text-gray-500">
+                      {elem}
+                    </p>
                   ))}
                   {link.name === "Terms & Conditions" && (
-                    <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
+                    <div className="mt-10 grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8">
                       <a
                         href={docEn.default}
+                        target="_blank"
+                        rel="noreferrer"
                         className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
                         Terms & Conditions in English
                       </a>
                       <a
                         href={docFr.default}
+                        target="_blank"
+                        rel="noreferrer"
                         className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                       >
                         Terms & Conditions in French
@@ -111,7 +119,7 @@ export const Legal = () => {
                     href={link.href}
                     className="text-base font-medium text-indigo-700 hover:text-indigo-600"
                   >
-                    Click here to Analytics opt-out
+                    {link.linkText}
                     <span aria-hidden="true"> &rarr;</span>
                   </a>
                 </div>

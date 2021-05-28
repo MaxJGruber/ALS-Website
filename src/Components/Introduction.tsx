@@ -1,6 +1,6 @@
 // import gatePic from "../Assets/french-farm-house.jpeg";
 // import housewallPic from "../Assets/buy-french-property.jpeg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import changeLanguage from "../redux/languageContent";
 import { InboxIcon, SparklesIcon } from "@heroicons/react/outline";
 import currentLocation from "../Assets/undraw_My_current_location_re_whmt.png";
@@ -32,12 +32,12 @@ export const Introduction = () => {
                   {changeLanguage().homePage.introduction.part1.description2}
                 </p>
                 <div className="mt-6">
-                  <NavLink
+                  <Link
                     to="/fees"
                     className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-yellow-200 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700"
                   >
                     {changeLanguage().homePage.introduction.part1.button}
-                  </NavLink>
+                  </Link>
                 </div>
               </div>
             </div>

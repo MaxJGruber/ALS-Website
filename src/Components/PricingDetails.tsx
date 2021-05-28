@@ -54,7 +54,7 @@ const plans = [
 ];
 const features = [
   {
-    title: "Tax Savings",
+    title: "Integration into the French health system",
     tiers: [
       { title: "starter", value: true },
       { title: "popular", featured: true, value: true },
@@ -62,7 +62,7 @@ const features = [
     ],
   },
   {
-    title: "Easy to use accounting",
+    title: "Rough estimate of future tax burdens and inheritance tax",
     tiers: [
       { title: "starter", value: true },
       { title: "popular", featured: true, value: true },
@@ -70,23 +70,58 @@ const features = [
     ],
   },
   {
-    title: "Multi-accounts",
+    title: "Help with your first French income tax declaration",
     tiers: [
-      { title: "starter", value: "3 accounts" },
-      { title: "popular", featured: true, value: "Unlimited accounts" },
-      { title: "intermediate", value: "7 accounts" },
+      { title: "starter", value: true },
+      { title: "popular", featured: true, value: true },
+      { title: "intermediate", value: true },
     ],
   },
   {
-    title: "Invoicing",
+    title:
+      "Help and information about taxe d’habitation and taxe foncière (local resident tax and property tax)",
     tiers: [
-      { title: "starter", value: "3 invoices" },
-      { title: "popular", featured: true, value: "Unlimited invoices" },
-      { title: "intermediate", value: "10 invoices" },
+      { title: "starter", value: true },
+      { title: "popular", featured: true, value: true },
+      { title: "intermediate", value: true },
     ],
   },
   {
-    title: "Exclusive offers",
+    title: "Registration of your car in France",
+    tiers: [
+      { title: "starter", value: "1 car" },
+      { title: "popular", featured: true, value: "1 car" },
+      { title: "intermediate", value: "1 car" },
+    ],
+  },
+  {
+    title: "Exchange of a foreign driver’s license",
+    tiers: [
+      { title: "starter", value: "2 licenses" },
+      { title: "popular", featured: true, value: "2 licenses" },
+      { title: "intermediate", value: "2 licenses" },
+    ],
+  },
+  {
+    title:
+      "Information & quotes for general insurances ( house, car, top up health insurance)",
+    tiers: [
+      { title: "starter", value: true },
+      { title: "popular", featured: true, value: true },
+      { title: "intermediate", value: true },
+    ],
+  },
+  {
+    title: "General administrative help (e-mails, letters, appointments etc)",
+    tiers: [
+      { title: "starter", value: "2 hours" },
+      { title: "popular", featured: true, value: "5 hours" },
+      { title: "intermediate", value: "10 hours" },
+    ],
+  },
+  {
+    title:
+      "Creation of a gite or bed & breakfast activity or self-employed status  (micro-entrepreneur)",
     tiers: [
       { title: "starter", value: false },
       { title: "popular", featured: true, value: true },
@@ -94,19 +129,12 @@ const features = [
     ],
   },
   {
-    title: "6 months free advisor",
+    title:
+      "Financial study – Global financial study with a targeted focus on management and transfer of assets, your tax situation and your financial and property investments.",
     tiers: [
       { title: "starter", value: false },
-      { title: "popular", featured: true, value: true },
+      { title: "popular", featured: true, value: false },
       { title: "intermediate", value: true },
-    ],
-  },
-  {
-    title: "Mobile and web access",
-    tiers: [
-      { title: "starter", value: false },
-      { title: "popular", featured: true, value: true },
-      { title: "intermediate", value: false },
     ],
   },
 ];
